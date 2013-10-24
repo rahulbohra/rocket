@@ -1,0 +1,2887 @@
+<elements>
+<element name="app-button">
+  <template>
+    <link rel="stylesheet" href="css/app-button.css"></link>
+    <style type="text/css">
+    </style>
+    <div>
+      <button class="button">Default</button>
+    </div>
+  </template>
+  <friends>app-fireworks,app-counter</friends>
+  <thumbnail>   
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0ODg2NDAxQzE4MEExMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0ODg2NDAxRDE4MEExMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdBRUJDNkFEMTgwOTExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdBRUJDNkFFMTgwOTExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BSiwYwAABC5JREFUeNrEV01sG0UUfrPrbOufdfyn2I4LcWhL29QtrVBUBCpIlAPiWPVHQmoPcOGGuCAOVQ9VUFuVA0gc6KESQgIOcEHiABIIiUvVAyrlR6oU2rhtYoITO7Y3LrG9O4+Z9e4yccY/tdL2Sc+enXnzvjfvb2cBETXGHzEu4aOjsoOpEfbzIQC8DY+HLhJKsUwIRN+5/Gf111s13VmgjNEZo7BBnKPOWBXYXUNBhyLsNxk3Du2O3Lnwxp79bFz2cXC+wsBHBUGlj+VcMRH+RSKCYZ3kY7z12s3KHuc5pvQA6AcOEvBBaaTfSYkQCpHoEGC9DmO7RHayTgNRiCcKSnlMm4xbjq5ghw7sott79g1gueWMeUxbLz8Tb7y0L9bITYa1SGgkwGN6f80y8v/cX/j2WjH2/S9LGTandXgSh/UAdzlliaq89my8cexwmmbTeojNhUShkN+XymXDnOH4i+mVr37+G5khWo8ckXpAkeSBqipozZza3nxub5KfFtbqBpYLeTBKRdJcq9uCmj8I4XjSimcmW9vTweh7J3fA9K5IfeaLWb+jl3RL3l4hAJWJnT/9FExPJQNIKRT++gNKC3MEcL1HG3UDluqGunTvlprITBrpnTn/kQOJIBMz3v9yNuQASr3Rtd4VJn7yhQgDT2kcfO63q1Cavw2d4Osdi7A8f1ufu3GVsg5LXzmY0BmbPapM7gEOPhY04ejzSfu5MPs7rJaXvPXRsQxEU09AMBK3n+uVEqws3oNqccF+ZrIa20MzT++HE4fTrR+uL/u6VYHUAyMqwtFDEYgnYjzmwGPu0rbdB2EiNw3hRApU34jNfMzn+JpL5YU5hYWG7twWCrDKaXbrJ3IDFIQDO6JtRQwcHbePjo1DbHwC0GxB6ZOzkD+xF/LHp+wxn+Nr3Jh2NBBKhbx9Sla29W5NTOmwykZS2Ww6GbXHLNs9gWjqybZRV2ag+s0VoEYF6GrVHq98dqnd3MezHhCvFP4/NaFv7cBdkxngZSpLcysYCNhjt9Q4uTE3fvx6w0lq333uynixdvfGdM1P1ueAKjNAbLFAlLY8rwBvl6/9DuEn7yR3jsl4QO5eRSFcnWjAlm4GELcKNpsIQWkZKpJJJA/BAIoE+yWh4hmCm28AKwo6aCdEE+UusMxWe5Me2ajImXNlJG+fgVsxMS15f+Adj5N+5NiGtfCrr6+TGfRiIm3FDYtQ2Z1uZfGu3Whib56xfeqWIzcoevpdr3E9CEkNsKg8DavFAgO4Y3e8+FvnbBaJr9WWF6HPNa//hQTbXVEahvmb19EoF0mvl9GwHvi/DOVXak+OAw0BNngSPpxC7HLveMD5zTfAoljjg31ZHb33AUJziG+Bfl6rurpyWZ06zakCq/+al/ExUcukH8BPN5b9pVrzU/aw+qiA2QdxheF9zD/P/xNgADCsCSZNzfAlAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <description>
+    When clicked broadcasts a "click" message
+  </description>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        var button = this.querySelector('div')
+        var t = this;
+        button.onclick = function (e) {
+          t.broadcast('Click');
+        }
+        this.setAttribute('buttonLabel', this.getAttribute("buttonLabel") || 'Click Me');
+        this.setAttribute('buttonColor', this.getAttribute("buttonColor") || '#4DB227');
+        this.setAttribute('textColor', this.getAttribute("textColor") || '#FFFFFF');
+      },
+      editable: {
+        buttonLabel: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setLabel(v);
+          }
+        },
+        textColor: {
+          type: "text",
+          description: "The color of the button label",
+          postset: function(v) {
+            this.setTextColor(v);
+          }
+        },
+        buttonColor: {
+          type: "text",
+          description: "The color of your button",
+          postset: function(v) {
+            this.setButtonColor(v);
+          }
+        }
+      },
+      setLabel: function (val) {
+        this.querySelector('button').innerHTML = val;
+      },
+      setButtonColor: function (val) {
+        this.querySelector('button').style.backgroundColor = val;
+      },
+      setTextColor: function (val) {
+        this.querySelector('button').style.color = val;
+      },
+      broadcast: function (e) {
+        this.emit(e)
+      }
+    });
+  </script>
+</element>
+<element name="app-chat-window">
+  <template>
+    <link rel="stylesheet" href="css/app-chat-window.css">
+    <header class="fixed">
+      <h1>Chat Room<span class="room-name-wrapper">Room: <span class="room-name"></span></span></h1>
+      <h3>Status: <span class="status">Disconnected</span></h3>
+      <h3>Nickname: <span class="nick-name"></span></h3>
+    </header>
+      <ul></ul>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQjQxQzYzQjE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQjQxQzYzQzE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNBNzVGMEM2MTgzQzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCNDFDNjNBMTgzRjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+AMUfVAAAAVdJREFUeNpi+P//PxsQTwTit//pB95B7WRjBBITGBgY8hkGBnSCHPAWyBA6eeMDQ/eauwxvP/2iqY3CfGwMpSHKDOYaAiDuOyaQ5SAWPSwHAZAdILugQIgJWYJeANkuJoYBBqMOYMElMSlLh0FXgZcqllx+8Jkhb9qVgQsBRnJCAJeLRxPhyMkFlOQKfKmeLiHASIsQoFWuGE2Eow4YPA4AtdXoBYR4WVEc8A7EKA1RQpGgFRDhZ2MoC1WGcd+R1SxfuPvJtwW7H4PKm99AzAHE3/MDFJ8GWElokeieLgakjsk7UnoW83Y++u1QeuwfEP9dvOfJe3I7JiAHEIWBFoHx1x9/upEc8RfkECSDm0FqiDUThEnOBd61p0o/fv3TD2InuskyATG4OP/282+3Y9nxWrpkw4DG00U/fv3rgvF//v7XCXRYGVkVFygYKADNULqWXAMAAgwA5Ka1dEgz8IAAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    Start your own chat room.
+  </description>
+  <script type="text/ceci">
+    var element = this;
+    require(['https://cdn.firebase.com/v0/firebase.js'], function() {
+      Ceci(element, {
+        init: function () {
+          var _this = this;
+
+          _this._settings = {
+            nick: _this.hasAttribute('nickname') ? _this.getAttribute('nickname') : 'Anonyfox' + Math.round(Math.random()*999),
+            room: _this.hasAttribute('room') ? _this.getAttribute('room') : 'Mozilla'
+          };
+
+          _this._list = this.querySelector('ul');
+          _this._roomLabel = this.querySelector('.room-name');
+          _this._nickLabel = this.querySelector('.nick-name');
+          _this._statusLabel = this.querySelector('.status');
+
+          var addItem = function (item) {
+            var li = document.createElement('li');
+            li.innerHTML = item.title;
+            _this._list.appendChild(li);
+            _this._list.scrollTop = _this._list.scrollHeight - _this._list.clientHeight;
+          };
+
+          _this._roomLabel.innerHTML = _this._settings.room;
+          _this._nickLabel.innerHTML = _this._settings.nick;
+
+          var _handlers = {
+            'child_added': function (snap) {
+              addItem(snap.val());
+            },
+            'child_removed': function () {
+              // not sure what to do here...
+            }
+          };
+
+          function onConnectionInfo (snap) {
+            _this._statusLabel.innerHTML = snap.val() === true ? 'Connected' : 'Disconnected';
+          }
+
+          _this._connect = function () {
+            if (_this._io) {
+              Object.keys(_handlers).forEach(function (h) {_this._io.off(h, _handlers[h])});
+              _this._ioConnected.off('value', onConnectionInfo);
+            }
+            _this._io = new Firebase("https://appmaker.firebaseio.com/" + _this._settings.room + "/chat/1");
+            _this._ioConnected = new Firebase("https://appmaker.firebaseio.com/.info/connected");
+            Object.keys(_handlers).forEach(function (h) {_this._io.on(h, _handlers[h])});
+            _this._ioConnected.on('value', onConnectionInfo);
+          };
+
+          _this.setAttribute('nickname', _this._settings.nick);
+          _this.setAttribute('room', _this._settings.room);
+
+          _this._connect();
+        },
+        sortByCreatedAt: function(a, b) {
+          return a.createdAt > b.createdAt;
+        },
+        defaultListener: 'sendMessage',
+        listeners: {
+          'setNickname': function (v, channel) {
+            this.log("sets nickname to: " + v.toString(), channel);
+            var oldNick = this._settings.nick;
+            if (oldNick === v.toString()) return;
+            this._settings.nick = v.toString();
+            this._nickLabel.innerHTML = this._settings.nick;
+            this._io.push({title: oldNick + ' is now known as ' + this._settings.nick });
+          },
+          'setRoom': function (v, channel) {
+            this.log("sets room to: " + v.toString(), channel);
+            if (this._settings.room === v.toString()) return;
+            this._settings.room = v.toString();
+            this._roomLabel.innerHTML = this._settings.room;
+            this._list.innerHTML = '';
+            this._connect();
+          },
+          'sendMessage': function (v, channel) {
+            this.log("sends message: " + v.toString(), channel);
+            this._io.push({title: this._settings.nick + ': ' + v.toString()});
+          },
+          'clear': function (v, channel) {
+            this._io.remove();
+            this.log("clears the room", channel);
+            this._list.innerHTML = '';
+          }
+        },
+        editable: {
+          nickname: {
+            type: 'text',
+            description: 'A nickname for your chatting persona',
+            postset: function (v) {
+              this['setNickname'](v);
+            }
+          },
+          room: {
+            type: 'text',
+            description: 'The chat room you want to be in',
+            postset: function (v) {
+              this['setRoom'](v);
+            }
+          }
+        }
+      });
+
+      callback();
+    });
+  </script>
+</element>
+<element name="app-counter">
+  <template>
+    <link rel="stylesheet" href="css/app-counter.css">
+    <div class="counter">
+      <span class="count-wrapper"><span class="count">0</span><span class="count-label"></span></span>
+    </div>
+  </template>
+  <description>
+    Listens for a message and counts
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBQjQ0QTNERjdCRkFFMjExOTI3Q0ZCMTdDMTBCM0U2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MUZDNEUxNDE4MjQxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MUZDNEUxMzE4MjQxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2QzRDQUJGQjdGQ0UyMTFCOTkwRkVEOUIzNUFDOTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCNDRBM0RGN0JGQUUyMTE5MjdDRkIxN0MxMEIzRTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Pp2EAwAAAzVJREFUeNrcV19IU1EY/+2fm1NqLsnwD2YizgoxpGjoKLCgsHzooSzICnqpyMKnggjJh8qntKceirDoz0tCf4goCVslWaIPYtFIM3E0mzeNbc25u3W/M+9ti9runG3RB+few73nnN93vvP7fuccBIPBNKG0CWUymDzj5jDTFMLjAoBjSI2dJwcmhYrR22MBzz1PCqrKWA2d2UpVjhwIUs39QJHUqWfUMlgokWJTxx2+rCooszdBRUUIJVnQMyIsnxW88wn849fiGk/+Eqj00JZfhjq3Pmoz/ssj+IaaEHANyVoCWQ4odHnQVd6B0rAOHq8f3f0T6LNNo2twiv0vydHBbDKgrjoXSxZrhZDw+P6sPKoTcTmQXvWKgY853Gi5/h42h/e37bIz1WisK4SlYil4xz1439QlTkLN8kYJvOnSUAR4zWoDKwRM5nT50X53lEVJlbOd8SVhEiqNFvbutNoZgAjctLMEel2oOwE2X32L18Mu1oaWaKs5l/Xlv76IPn4sBwIcEwwc3FaEhg3LsHZFJk41lDFwEi7e2cXq9RvzpD62cXdo8MWViUdg9mM7lFlm6AX2H6gtYrNl30faBLYfF9Jxs1BqoE//OdQ3T6iNQpMV0wFZQjTTvxszAw3w22+x2dKbwEMcOcreI3aX1L40PzMUvem+hRMiEhgqvsEjCM5y7Jt2zU1GNorKlcfjUtv1q4whTZhbvgVVQgL/VReIgCJBD2/JR0FOBgJTveAn7stXwvkYpebFzmHGfjIiaPP+Mik7/speEA5OuiDOnDJkV01BXOARDsTaC9R5e6Gt6GB168AETt/4IP0jcMoQxhWBoERauduxLHeJbOIm9LDHjtbOUenfmT3FTHrJfO9OhjKj+ATTj1giJMsBEZzIdrtrDB3dnyXdb9lXClPhIqltmulsRF/vy+qYTkR1QKExSuCi1IpmWWlguR+e/+FGUqwxnQPfY5m/A6KUfnJ4IsDZ3tDrpO3nj33JAfHAkrASpuxIRkoWcNuEdS7B01Zz3IPLOWVHj0DAi5m+HfM6rlMf3+ChBTwT/q/H8n/CAU68LiXLws6KXKovp60Iu55zqbie/xBgACteX9KVQyisAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <friends>app-button</friends>
+  <script type="text/flathead">
+  </script>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.count = 0;
+        var countLabel = this.getAttribute('countItem');
+        if(countLabel === null) {
+          countLabel = "";
+        }
+        this.setAttribute('countItem', countLabel);
+      },
+      updateDisplay: function () {
+        this.querySelector('.count').innerHTML = this.count;
+        // bypasses default broadcasting, so that the value
+        // is only sent along after a broadcast channel has been chosen
+
+        if(this.count > 1){
+          var countLabel = this.getAttribute('countItem');
+          var countLabel = countLabel.trim();
+          var lastChar = countLabel.charAt(countLabel.length-1);
+          if(lastChar){
+            if(lastChar.toLowerCase() != "s"){
+              var addChar = "s";
+              if(lastChar == lastChar.toUpperCase()){
+                addChar = addChar.toUpperCase();
+              }
+              this.setLabel(this.getAttribute('countItem') + addChar);            
+            }
+          }
+        }
+        this.lookAtMe();
+        this.emit(this.count);
+      },
+      editable: {
+        countItem: {
+          type: "text",
+          description: "Name for what you're counting",
+          postset: function(v) {
+            this.setLabel(v);
+          }
+        }
+      },
+      setLabel: function (value){
+        this.querySelector('.count-label').innerHTML = " " + value;
+      },
+    defaultListener: 'countUp',
+      listeners: {
+        countUp: function (listener,channel) {
+          console.log("channel is", channel);
+          console.log("listener is", listener);
+          this.count++;
+          this.log("counting up to " + this.count, channel);
+          this.updateDisplay();
+        },
+        countDown: function (listener,channel) {
+          this.count--;
+          this.log("counting down to " + this.count, channel);
+          this.updateDisplay();
+        },
+        resetCount: function (value, channel) {
+          this.count = parseInt(value);
+          if (isNaN(this.count)){
+            this.count = 0;
+          }
+          this.log("resetting counter to " + this.count, channel);
+          this.updateDisplay();
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-fireworks">
+  <template>
+    <style type="text/css">
+    app-fireworks {
+      background-color: #0e1012;
+      display: inline-block;
+    }
+    </style>
+    <canvas class="fireworks-canvas">Canvas is not supported in your browser.</canvas>
+  </div>
+  </template>
+  <friends>app-button</friends>
+  <description>
+    Shows firework show
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0ODg2NDAyMDE4MEExMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0ODg2NDAyMTE4MEExMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ4ODY0MDFFMTgwQTExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ4ODY0MDFGMTgwQTExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+M5BkpAAAAw1JREFUeNrsV81rE0EUn5lNNtkktdKQkNCqZ60BQVuFRkQreih48aoHpRBBpX+KYEuoxXqRXsQWBDVWBK0fB2sPQiNF6cFq6qV4aRLzsTszvtlswjpmkzQJ6sGB337MvPd+b3bevDeLOeeozVZVxO0oE/SX2j9FrAKCXeTos2w2JBYC9wBLgFATg7iF9RU2Xlo2fyUXwWVDEJDmlSbuIWl8JwhJtoL28XoKYZvCQgfECzbSsDzupBS2FKO5hwhVAe8HOKM3AB85ZyUTrPyJGz8mmZ49KMlGLRvhehyOHtuMYH3jlo/T4jT0U+7cKKeFWbhrkgN10Ww7EaXveESJnH+BiCeBuMGMzbmNwptj2/kn/jKAFV4PMf3zlI5YGaS9lxErLfrHuNos1LFT5so/MgPWr40sPyC7h0Z54SstrpzLsu33Huj3yhFNemLcO/zYwN4BN2LFmXxKS5gGxvjOE4gnNhMnvYdPgSFUXD6rAOku0V1PlmVXcfHtGQIzZ/B1xn2jmUPtZi5MgicuwVWsMWK5Nbs8s+Xq2pRARtG/TJuqiKjX2iUm2BMdEQ/Gtzl7YRA6ikVuAKgFsxmZu6ZNrPhPNyJ22T2Wqg0G5UjlM6arpFhyoCrPq+Ms98Fy29tvG0MyD2mh7NmbIaVL7CAnunXnsQoxllBbMtgaGVMoMMilmckO1nQtWcG76ZDbcSUIGswYckLKXI+Bi9RhaZjsiKv/gvnOmfGs7XqMXYGkMOHem1BIYH91ZrKOUjMGMu59V7DQwURNtk0MSSSNaOEO7EvsHV5kkCSYk76ZQI4+pUIW9vLtfMqz2tkJRPFdBfJXWNujaPF3WB28SUnvEYYUzYR4hj5Di69wyFouSKtLQH6905SJrLSnQvaahC0y3sBZhjidhQ08AboFm65jBDkV8fu/lUUjF+NGPgmlcB1Kog7Iw20NKtcUp6VYnbI473SYaHZymO/SQSDUjPiPHX1c0pfPAtat55OArQ5Ol1uWjeeWzWyz4BJFvAfwvUt/EuJ4mwOUW4rq/78w3W4/BRgA0Z5s5rsQHQcAAAAASUVORK5CYII=">
+  </thumbnail>
+
+  <script type="text/ceci">
+    var element = this;
+    Ceci(this, {
+      init: function (params) {
+        // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
+        // not supported in all browsers though and sometimes needs a prefix, so we need a shim
+        window.requestAnimFrame = ( function() {
+          return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function( callback ) {
+                  window.setTimeout( callback, 1000 / 60 );
+                };
+        })();
+
+        this.setAttribute('fireworkSound', this.getAttribute("fireworkSound") || 'Kapow!');
+
+        // now we will setup our basic variables for the demo
+        var canvas = this.querySelector(".fireworks-canvas"),
+            ctx = canvas.getContext( '2d' ),
+            // full screen dimensions
+            cw = document.querySelector('.phone-canvas').clientWidth,
+            ch = document.querySelector('.phone-canvas').clientWidth, // square is fine
+            // firework collection
+            fireworks = [],
+            // particle collection
+            particles = [],
+            // when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+            limiterTotal = 5,
+            limiterTick = 0,
+            mousedown = false,
+            // mouse x coordinate,
+            mx,
+            // mouse y coordinate
+            my;
+
+        // starting hue
+        this.hue = 120;
+        // this will time the auto launches of fireworks, one launch per 80 loop ticks
+        this.timerTotal = 80,
+        this.timerTick = 0,
+        // set canvas dimensions
+        canvas.width = cw;
+        canvas.height = ch;
+        this.ctx = ctx;
+        this.cw = cw;
+        this.ch = ch;
+
+        // now we are going to setup our function placeholders for the entire demo
+
+        // get a random number within a range
+        function random( min, max ) {
+          return Math.random() * ( max - min ) + min;
+        }
+        this.random = random;
+
+        // calculate the distance between two points
+        function calculateDistance( p1x, p1y, p2x, p2y ) {
+          var xDistance = p1x - p2x,
+              yDistance = p1y - p2y;
+          return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
+        }
+
+        var t = this;
+        // create firework
+        function Firework( sx, sy, tx, ty, hue ) {
+          // actual coordinates
+          this.x = sx;
+          this.y = sy;
+          // starting coordinates
+          this.sx = sx;
+          this.sy = sy;
+          // target coordinates
+          this.tx = tx;
+          this.ty = ty;
+          this.hue = hue;
+          // distance from starting point to target
+          this.distanceToTarget = calculateDistance( sx, sy, tx, ty );
+          this.distanceTraveled = 0;
+          // track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+          this.coordinates = [];
+          this.coordinateCount = 3;
+          // populate initial coordinate collection with the current coordinates
+          while( this.coordinateCount-- ) {
+            this.coordinates.push( [ this.x, this.y ] );
+          }
+          this.angle = Math.atan2( ty - sy, tx - sx );
+          this.speed = 2;
+          this.acceleration = 1.05;
+          this.brightness = random( 50, 70 );
+        }
+        // update firework
+        Firework.prototype.update = function( index ) {
+          // remove last item in coordinates array
+          this.coordinates.pop();
+          // add current coordinates to the start of the array
+          this.coordinates.unshift( [ this.x, this.y ] );
+
+          // speed up the firework
+          this.speed *= this.acceleration;
+
+          // get the current velocities based on angle and speed
+          var vx = Math.cos( this.angle ) * this.speed,
+              vy = Math.sin( this.angle ) * this.speed;
+          // how far will the firework have traveled with velocities applied?
+          this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
+
+          // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+          if( this.distanceTraveled >= this.distanceToTarget ) {
+
+            element.emit(t.getAttribute('fireworkSound'));
+            createParticles( this.tx, this.ty, this.hue );
+            // remove the firework, use the index passed into the update function to determine which to remove
+            fireworks.splice( index, 1 );
+          } else {
+            // target not reached, keep traveling
+            this.x += vx;
+            this.y += vy;
+          }
+        }
+        // draw firework
+        Firework.prototype.draw = function() {
+          ctx.beginPath();
+          // move to the last tracked coordinate in the set, then draw a line to the current x and y
+          ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
+          ctx.lineTo( this.x, this.y );
+          ctx.strokeStyle = 'hsl(' + this.hue + ', 100%, ' + this.brightness + '%)';
+          ctx.stroke();
+
+          ctx.beginPath();
+          // draw the target for this firework with a pulsing circle
+          ctx.arc( this.tx, this.ty, this.targetRadius, 0, Math.PI * 2 );
+        }
+        // create particle
+        function Particle( x, y, hue ) {
+          this.x = x;
+          this.y = y;
+          // track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+          this.coordinates = [];
+          this.coordinateCount = 5;
+          while( this.coordinateCount-- ) {
+            this.coordinates.push( [ this.x, this.y ] );
+          }
+          // set a random angle in all possible directions, in radians
+          this.angle = random( 0, Math.PI * 2 );
+          this.speed = random( 1, 10 );
+          // friction will slow the particle down
+          this.friction = 0.95;
+          // gravity will be applied and pull the particle down
+          this.gravity = 1;
+          // set the hue to a random number +-20 of the overall hue variable
+          this.hue = random( hue - 20, hue + 20 );
+          this.brightness = random( 50, 80 );
+          this.alpha = 1;
+          // set how fast the particle fades out
+          this.decay = random( 0.015, 0.03 );
+        }
+        // update particle
+        Particle.prototype.update = function( index ) {
+          // remove last item in coordinates array
+          this.coordinates.pop();
+          // add current coordinates to the start of the array
+          this.coordinates.unshift( [ this.x, this.y ] );
+          // slow down the particle
+          this.speed *= this.friction;
+          // apply velocity
+          this.x += Math.cos( this.angle ) * this.speed;
+          this.y += Math.sin( this.angle ) * this.speed + this.gravity;
+          // fade out the particle
+          this.alpha -= this.decay;
+          // remove the particle once the alpha is low enough, based on the passed in index
+          if( this.alpha <= this.decay ) {
+            particles.splice( index, 1 );
+          }
+        }
+        // draw particle
+        Particle.prototype.draw = function() {
+          ctx.beginPath();
+          // move to the last tracked coordinates in the set, then draw a line to the current x and y
+          ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+          ctx.lineTo( this.x, this.y );
+          ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+          ctx.stroke();
+        }
+        // create particle group/explosion
+        function createParticles( x, y, hue ) {
+          // increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+          var particleCount = 30;
+          while( particleCount-- ) {
+            particles.push( new Particle( x, y, hue ) );
+          }
+        }
+        this.Firework = Firework;
+        this.Particle = Particle;
+        this.fireworks = fireworks;
+        this.particles = particles;
+        this.loop();
+      },
+      loop: function() {
+        // this function will run endlessly with requestAnimationFrame
+        requestAnimFrame( this.loop );
+        // increase the hue to get different colored fireworks over time
+        this.hue += this.random(0,20)
+        // normally, clearRect() would be used to clear the canvas
+        // we want to create a trailing effect though
+        // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+        this.ctx.globalCompositeOperation = 'destination-out';
+        // decrease the alpha property to create more prominent trails
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        this.ctx.fillRect( 0, 0, this.cw, this.ch );
+        // change the composite operation back to our main mode
+        // lighter creates bright highlight points as the fireworks and particles overlap each other
+        this.ctx.globalCompositeOperation = 'lighter';
+        // loop over each firework, draw it, update it
+        var i = this.fireworks.length;
+        while( i-- ) {
+          this.fireworks[ i ].draw();
+          this.fireworks[ i ].update( i );
+        }
+        // loop over each particle, draw it, update it
+        var i = this.particles.length;
+        while( i-- ) {
+          this.particles[ i ].draw();
+          this.particles[ i ].update( i );
+        }
+      },
+      launchRocket: function() {
+        this.fireworks.push( new this.Firework( this.cw / 2, this.ch,
+          this.random( 0, this.cw ), this.random( 0, this.ch / 2 ), this.hue));
+      },
+      editable: {
+        fireworkSound: {
+          type: "text",
+          description: "Tell the fireworks what to broadcast every shot."
+        }
+      },
+      defaultListener: "shootRocket",
+      listeners: {
+        shootRocket: function (count, channel) {
+          this.log("launching rocket", channel);
+          this.launchRocket();
+        },
+        shootThisManyRockets: function (count, channel) {
+          var intRegex = /^\d+$/;
+          if (intRegex.test(count)) {
+
+            var n = Number(count);
+            if (n > 15){
+              n = 15;
+              this.log("launching " + n + " (max) rockets", channel);
+            }
+            else{
+              this.log("launching " + n + " rockets", channel);
+            }
+            for (var i=0; i < n; i++) {
+              this.launchRocket();
+            }
+          } else {
+            this.launchRocket();
+            this.log("launching rocket", channel);
+          }
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-flickr">
+  <template>
+    <link rel="stylesheet" href="css/app-flickr.css">
+    <div class="wrapper"><img height="100%" class="image"/></div>
+    <div class="loading-overlay"></div>
+  </template>
+
+  <description>
+    Shows images from Flickr
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCODgzNEFCOTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCODgzNEFCQTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI4ODM0QUI3MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI4ODM0QUI4MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mOHsQwAAA9xJREFUeNrEV2toFFcUPufOhGRX0mq7uzExyRqzUfNohIrRpDQiihJRsRbxEUWxNq1KRSK0Clb6Q0QiEYw2ghUCKooP8EGCVgxqbK0kitom/rDRaG3cmBXTVM1jnbnHu0MSN+Ps7Ca7mAvD3MeZe75z5jvn3AuqymdzTm56z61HZwH6OogwEoagEUEL+tD4BuvL6+Gvhy9M5cWDAcbkN6/2zEu6eeiV/2R0LJWtzdL6cu9KEOWgU64f+/dlg/l+4IWuvj6DIW6DBUADkONm8rLZ11FitXi+A/KzR2lYq28/pbIzzVxRtf2kEAAoPZyIGRSAjfPtMCsntW88d0oSdnm5VF75hEfKw6YC+dmJ2ttzJxVa77i0fsGkeDCIhkDN56WoQQFAsa/RzgyRm0RAWCQkf2sIkGr+bNZcbZ9wHxwTGrX5X2+4VT85CpfEsllsl57yIAGjqdkJ6FsSJOTlVU9YD7NZGNZjSCT0sb3kZAuKR59MMFzXh8pSrkONEUpeSqgAUAciIsTzByCHACAirtbIPFyGXUWZ8LJT8fYmJxZBq0zbMAvSzq9dPNFmhY+GtwcMw0jVAF1KRypZndLptI9gzzuaYfuFGbEDLUYUwEtBATGGsG1lqjcjKc7a8fp/KK1eAAKEYTnGIFygIGQ0BLPhi2Q1Z6w9WuFeKLu8BB7/1xB6MdIr+8Aqw561WZpVO441QsMj80NM4fQ4PndygsRJhX2/rYK7LVcGfx5AkRM3LUqBZIcFEm0xsHtNJqycmQASQ0MPzplso69mjdH2P1S7EeoenQ7rQEKLptopN90GXrWLah+e6fIpXjHDCWXrXJRgE97Ht+kiL2MEFS9waYgq60uh+t6BAWfCfoUp02kBYY1m4cHaYth7tTBm95Wl9Kq7jTKSbHhgw0QqyLFon6Q7rbS1ME14DPH3B0fpxK2fTC2TgxWLWCvC1mVpIEsSXGs6RjWNB7W1m/+cxQeeOij6bD9kxk/D77/8FD7PalKykkey6CiJ3fr3HP/l2reMggQKC/bfNy92kuPDYehuvwcV19f3+89tnW4ouTgPjtzcLApXN+SOS5FjLRZ2/1kd/Hx1BfrIF6zJZqG/MP9jnjs+nnmVDthbsxy6lVcGUgTn7+6BBvcl+CZvvygcHHZdWgjim5Aya0AAGc5otajApXno8I0f9PGrv6TA47Z62FKVF7FyTD8uTecSk/CPpuNw+e+KSFfDdwGI65L//GtFVdytL5o8Fde/69JlOa6PEoNsSAb9Pvk0x5S3lojLaYu4nMYNxa1IpOfn4pALq8T1tPW9K1e7PR3e9tVvBBgAminfPR511i0AAAAASUVORK5CYII=">
+  </thumbnail>
+
+  <script type="text/ceci">
+    function Text(value) {
+      this.value = value;
+      this.editor = 'app-text-input';
+    };
+    Text.prototype.toString = function() {
+      return String(this.value);
+    };
+    Ceci(this, {
+      percent : 0,
+      _channel: null,
+
+      init: function (params) {
+        var t = this;
+        var img = this.querySelector("img");
+        if (! this.hasAttribute('searchTerm')) {
+          this.setAttribute('searchTerm', 'cat');
+        }
+
+        this.term = this.getAttribute('searchTerm');
+        this.loading = this.querySelector('.loading-overlay');
+
+        if (! this.hasAttribute('imageHeight')) {
+          this.setAttribute('imageHeight', '200');
+        }
+
+        this.setHeight(this.getAttribute('imageHeight'));
+
+        this.querySelector("img").onclick = function (e) {
+          t.sendImage();
+        }
+
+        this.newImage();
+      },
+      editable: {
+        "imageHeight": {
+          min : 0,
+          max: 400,
+          type: "number",
+          description: "Set the width of your image",
+          postset: function(v) {
+            this.setHeight(v);
+          }
+        },
+        searchTerm: { // XXX turn this to term and make an infinite loop. XXX debug
+          min : 0,
+          max: 100,
+          type: "text",
+          description: "What kind of pictures are we looking for?",
+          postset: function(val) {
+            this.term = val;
+            this.newImage(val, this._channel);
+          }
+        }
+      },
+      setHeight: function (val) {
+        this.style.height = val + "px";
+        this.querySelector(".image").style.height = val + "px";
+      },
+      sendImage : function(){
+        var img = this.querySelector("img");
+        this.emit(new Text(img.getAttribute("src")),"Image Url");
+      },
+      defaultListener : "newImage",
+      listeners: {
+        setImageKeyword: function(val, channel) {
+          this.log("setting image keyword to: "+ val, channel);
+          this._channel = channel;
+          this.setAttribute("searchTerm", val); // causes recursion
+        },
+        setLocation: function(location, channel) {
+          this.log("setting location to: "+ location.value.lat + ',' + location.value.lng, channel);
+          this.lat = location.value.lat;
+          this.lng = location.value.lng;
+          this.newImage();
+        },
+        newImage: function () {
+          this.loading.style.display = "block";
+          var img = this.querySelector("img");
+          var API_KEY = "4b3f331df9427810328ad803b5b0cb9a";
+          var url = encodeURI("http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key="+API_KEY+"&text=" + this.term + "&safe_search=1&per_page=40");
+          if (this.lat && this.lng) {
+            url = url + "&lat="+this.lat + "&lon=" + this.lng;
+          } else {
+            url = url + "&sort=relevance"; // if not location based, let's make them relevant
+          }
+          var src;
+          var element = this;
+          $.getJSON(url + "&format=json&jsoncallback=?", function(data){
+            var count = data.photos.photo.length;
+            if (!count) return; // no photos found
+            var randomIndex = Math.floor(Math.random()*count);
+            var item = data.photos.photo[randomIndex];
+            var src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
+            $(img).attr("src",src);
+            // straight emit, will only broadcast if a channel has been chosen
+            element.sendImage();
+            element.loading.style.display = "none";
+          });
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-form-submit">
+  <template>
+    <link rel="stylesheet" href="css/app-form-submit.css"></link>
+    <style type="text/css">
+    </style>
+    <div>
+      <ul class="property-list"></ul>
+      <div>
+        <button class="button">Submit</button>
+      </div>
+    </div>
+  </div>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNDVCOTVDODE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNDVCOTVDOTE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM0NUI5NUM2MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM0NUI5NUM3MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yROonAAAAKBJREFUeNpi/P///0cGBgY+hoEBnxiBDvjPMICACYmdDcSMdMLZMEuRQ4CRzp7/jx4CAx4FAwJY0INkRIYA44hOA6MOADngMDQHDAQ+PKjqAls61gW2o3XBaF0wWheMFsWDygE6VK4PDkPNJLI4+v//8H/qA5CZDMRgeFF8z1OaKkGqtP0pAylF+2giHHAHDHgiBBE6VHbEYaiZRDkAIMAAi4iybzxuY5IAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    When clicked I broadcast an aggregate of all my inputs
+  </description>
+  <script type="text/ceci">
+    function FormData(hash) {
+      // Turn the hash into a sequence (which should be in the right order, but we'll assume the current order)
+      this.seq = [];
+      this.hash = hash;
+      this.editor = 'sequence';
+      var that = this;
+      Object.keys(hash).forEach(function (key) {
+        var obj = {};
+        obj.name = key;
+        obj.value = hash[key].value;
+        obj.editor = hash[key].editor;
+        that.seq.push(obj);
+      });
+    };
+    FormData.prototype.toString = function(pretty) {
+      if (pretty) {
+        var seq = this.seq;
+        var parts = seq.map(function(cb, index) {
+          var obj = seq[index];
+          return obj.name+': ' + obj.value;
+        })
+        return parts.join(', ');
+      } else {
+        return JSON.stringify(this.seq);
+      }
+    }
+    FormData.prototype.toPrettyString = function() {
+      return JSON.stringify(this.seq.keys);
+    }
+
+    Ceci(this, {
+      init: function (params) {
+        var _this = this;
+        this._data = {};
+
+        this._list = this.querySelector('.property-list');
+
+        this.querySelector('.button').onclick = function (e) {
+          _this.broadcast(_this._data);
+        };
+
+        Array.prototype.forEach.call(this.attributes, function (attr) {
+          if (attr.name.indexOf('data-') > -1) {
+            _this.data[attr.name] = attr.value;
+            this.syncList(attr.name);
+          }
+        });
+      },
+      editable: {
+        buttonLabel: {
+          type: "text",
+          description: "aa",
+          postset: function(val) {
+            this.querySelector('button').innerHTML = val;
+          }
+        }
+      },
+      defaultListener: "setValue",
+      listeners: {
+        setValue: function (val, channel, type) {
+          this._data[type] = val;
+          this.syncList(type);
+        }
+      },
+      syncList: function (property) {
+        var value = this._data[property];
+        var fixedProperty = property.replace(/\s/g, '');
+        var currentListItem = this._list.querySelector('li[data-' + fixedProperty + ']');
+        if (!!value) {
+          if (!currentListItem) {
+            currentListItem = document.createElement('li');
+            this._list.appendChild(currentListItem);
+          }
+          currentListItem.innerHTML = '<div class="name">' + property + '</div><div class="value">' + value + '</div>';
+          currentListItem.setAttribute('data-' + fixedProperty, value);
+        } else {
+          if (currentListItem) {
+            this._list.removeChild(currentListItem);
+          }
+        }
+      },
+      broadcast: function (hash) {
+        var v = new FormData(hash);
+        this.emit(v);
+      }
+    });
+  </script>
+</element>
+<element name="app-form">
+  <template>
+    <link rel="stylesheet" href="css/app-form.css"></link>
+    <style type="text/css">
+    </style>
+    <h1>Form Title</h1>
+    <div class="form-items">
+    </div>
+    <div>
+      <button class="button">Default</button>
+    </div>
+  </template>
+  <friends>app-fireworks,app-counter</friends>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNDVCOTVDODE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNDVCOTVDOTE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM0NUI5NUM2MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM0NUI5NUM3MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yROonAAAAKBJREFUeNpi/P///0cGBgY+hoEBnxiBDvjPMICACYmdDcSMdMLZMEuRQ4CRzp7/jx4CAx4FAwJY0INkRIYA44hOA6MOADngMDQHDAQ+PKjqAls61gW2o3XBaF0wWheMFsWDygE6VK4PDkPNJLI4+v//8H/qA5CZDMRgeFF8z1OaKkGqtP0pAylF+2giHHAHDHgiBBE6VHbEYaiZRDkAIMAAi4iybzxuY5IAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    When clicked broadcasts a "click" message
+  </description>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        var button = this.querySelector('button')
+        var t = this;
+        button.onclick = function () {
+          t.sendData();
+          // t.broadcast('Click');
+        }
+
+        this.setAttribute('formTitle', this.getAttribute("formTitle") || 'Form Title');
+        this.setAttribute('buttonLabel', this.getAttribute("buttonLabel") || 'Submit');
+        this.setAttribute('buttonColor', this.getAttribute("buttonColor") || '#4DB227');
+        this.setAttribute('textColor', this.getAttribute("textColor") || '#FFFFFF');
+        this.setAttribute("formFields", this.getAttribute("formFields")|| JSON.stringify(["Field 1","Field 2","Field 3"]));
+
+      },
+      buildForm : function(v){
+        var options = JSON.parse(v);
+        this.querySelector(".form-items").innerHTML = "";
+        for(var key in options) {
+          var item = document.createElement("input");
+          item.setAttribute("type","text")
+          item.setAttribute("placeholder",options[key])
+          this.querySelector(".form-items").appendChild(item);
+        }
+      },
+      sendData : function() {
+        var inputs = $(this).find(".form-items input");
+        console.log(inputs);
+        var sendData = []
+        $(inputs).each(function(i,input){
+          var item = {};
+          item["name"] = $(this).attr("placeholder");
+          item["value"] = $(this).val();
+          sendData.push(item);
+        });
+        this.broadcast(JSON.stringify(sendData));
+      },
+      editable: {
+        formTitle: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setTitle(v);
+          }
+        },
+        formFields: {
+          type: "multiple",
+          description: "Menu Options",
+          postset: function(v) {
+            this.buildForm(v);
+          }
+        },
+        buttonLabel: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setLabel(v);
+          }
+        },
+        textColor: {
+          type: "text",
+          description: "The color of the button label",
+          postset: function(v) {
+            this.setTextColor(v);
+          }
+        },
+        buttonColor: {
+          type: "text",
+          description: "The color of your button",
+          postset: function(v) {
+            this.setButtonColor(v);
+          }
+        }
+      },
+      setTitle: function (val) {
+        this.querySelector('h1').innerHTML = val;
+      },
+      setLabel: function (val) {
+        this.querySelector('button').innerHTML = val;
+      },
+      setButtonColor: function (val) {
+        this.querySelector('button').style.backgroundColor = val;
+      },
+      setTextColor: function (val) {
+        this.querySelector('button').style.color = val;
+      },
+      broadcast: function (e) {
+        this.emit(e)
+      }
+    });
+  </script>
+</element>
+<element name="app-form-two">
+  <template>
+    <link rel="stylesheet" href="css/app-form-two.css"></link>
+    <style type="text/css">
+    </style>
+    <h1><span class="form-title">Form Title</span>    <a class="add-field" href="#">Add Field</a></h1>
+    <div class="new-field"><input type="text" placeholder="Field Name"/><a href="#">ADD</a></div>
+    <div class="form-items">
+    </div>
+    <div>
+      <button class="button">Default</button>
+    </div>
+  </template>
+  <friends>app-fireworks,app-counter</friends>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNDVCOTVDODE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNDVCOTVDOTE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM0NUI5NUM2MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM0NUI5NUM3MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yROonAAAAKBJREFUeNpi/P///0cGBgY+hoEBnxiBDvjPMICACYmdDcSMdMLZMEuRQ4CRzp7/jx4CAx4FAwJY0INkRIYA44hOA6MOADngMDQHDAQ+PKjqAls61gW2o3XBaF0wWheMFsWDygE6VK4PDkPNJLI4+v//8H/qA5CZDMRgeFF8z1OaKkGqtP0pAylF+2giHHAHDHgiBBE6VHbEYaiZRDkAIMAAi4iybzxuY5IAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    When clicked broadcasts a "click" message
+  </description>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        var button = this.querySelector('button')
+        var t = this;
+        button.onclick = function () {
+          t.sendData();
+        }
+
+        this.setAttribute('formTitle', this.getAttribute("formTitle") || 'Form Title');
+        this.setAttribute('buttonLabel', this.getAttribute("buttonLabel") || 'Submit');
+        this.setAttribute('buttonColor', this.getAttribute("buttonColor") || '#4DB227');
+        this.setAttribute('textColor', this.getAttribute("textColor") || '#FFFFFF');
+        this.setAttribute("formFields", this.getAttribute("formFields")|| JSON.stringify(["Field 1","Field 2","Field 3"]));
+
+        $(this).find(".add-field").on("click",function(){
+          $(t).find(".new-field").toggle();
+          
+        });
+
+        $(this).find(".new-field a").on("click",function(){
+          var placeholder = $(this).closest("div").find("input").val();
+          if(placeholder){
+            t.addField($(this).closest("div").find("input").val());
+            $(this).closest("div").hide();
+            t.rememberForm();
+          }
+        });
+
+        $(this).on("click", ".delete-me", function(){
+          $(this).closest(".input-wrapper").remove();
+          t.rememberForm();
+        });
+
+      },
+      rememberForm : function(){
+        var inputs = $(this).find(".form-items input");
+        var formFields = [];
+
+        $(inputs).each(function(){
+          formFields.push($(this).attr("placeholder"));
+        });
+
+        this.setAttribute("formFields", JSON.stringify(formFields));
+      },
+      buildForm : function(v){
+        var options = JSON.parse(v);
+        this.querySelector(".form-items").innerHTML = "";
+
+        for(var key in options) {
+          this.addField(options[key])
+        }
+      },
+      addField : function(placeHolder){
+        var itemwrapper = document.createElement("div");
+
+        var deleteMe = document.createElement("a");
+        $(deleteMe).text("X");
+        $(deleteMe).addClass("delete-me");
+        
+        $(itemwrapper).addClass("input-wrapper");
+        var item = document.createElement("input");
+        item.setAttribute("type","text")
+        item.setAttribute("placeholder",placeHolder)
+
+        $(itemwrapper).append(item);
+        $(itemwrapper).append(deleteMe);
+        this.querySelector(".form-items").appendChild(itemwrapper);
+
+      },
+      sendData : function() {
+        var inputs = $(this).find(".form-items input");
+        var sendData = []
+        $(inputs).each(function(i,input){
+          var item = {};
+          item["name"] = $(this).attr("placeholder");
+          item["value"] = $(this).val();
+          sendData.push(item);
+        });
+        this.broadcast(JSON.stringify(sendData));
+      },
+      editable: {
+        formTitle: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setTitle(v);
+          }
+        },
+        formFields: {
+          type: "multiple",
+          description: "Menu Options",
+          postset: function(v) {
+            this.buildForm(v);
+          }
+        },
+        buttonLabel: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setLabel(v);
+          }
+        },
+        textColor: {
+          type: "text",
+          description: "The color of the button label",
+          postset: function(v) {
+            this.setTextColor(v);
+          }
+        },
+        buttonColor: {
+          type: "text",
+          description: "The color of your button",
+          postset: function(v) {
+            this.setButtonColor(v);
+          }
+        }
+      },
+      setTitle: function (val) {
+        this.querySelector('.form-title').innerHTML = val;
+      },
+      setLabel: function (val) {
+        this.querySelector('button').innerHTML = val;
+      },
+      setButtonColor: function (val) {
+        this.querySelector('button').style.backgroundColor = val;
+      },
+      setTextColor: function (val) {
+        this.querySelector('button').style.color = val;
+      },
+      broadcast: function (e) {
+        this.emit(e)
+      }
+    });
+  </script>
+</element>
+<element name="app-header">
+  <template>
+    <link rel="stylesheet" href="css/app-header.css">
+    <style type="text/css">
+    </style>
+    <header>Header</header>
+  </template>
+  <description>
+    I'm a page header. I don't listen or broadcast.
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBQjQ0QTNERjdCRkFFMjExOTI3Q0ZCMTdDMTBCM0U2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBDMTE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBDMDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2QzRDQUJGQjdGQ0UyMTFCOTkwRkVEOUIzNUFDOTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCNDRBM0RGN0JGQUUyMTE5MjdDRkIxN0MxMEIzRTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/984SgAAAxpJREFUeNrMV11I01EUP86lFjNlG9twwnAxWyTNnC4/CjNT0UhYL9GDhkK99l72VBQFQT320oM9RL3sQTAkM0bpxDRDJMyBMfrAjTacmSlYa7+77n/Tzbn/3EcH7u7Zueece875n3PuvRQIBPKC40FweAOZA9+/PfNygj/3iegKZQfuwABvEJHfHGqheY8jI7uWq+qor+0FUJ8EmwPL1OZb9pJLKMsgTUbIoKqlCs0pKlfXhzxyj9Hs4gg5PePpNwCbX28b3kQ7rDlJVtNVujF0WrQRog1oMvSy+bnjG005/Qw3G4qova6ErYk1QFQOaIuMVF92nuG2MTe9nF1iAzgAa+BJmwEW3TmS5OTS6/cecrrXBDpw0LAGnrQYsCe3gOr0Ie/tM96odU4DD3hTboBFZyVN4QGacy2zsAO6GzVktSgZDhrWwAPelBvAk88xG/a+83gJtdaohf98jfOmzIDK0nbWPr3+deq3LzJac0UxKYryyajbTzV6GaNhDTzghUzKDGgy9LB5ZMoj0DosYc/P1oZxzsNldm0AGs/R0g5aXdugZ29C3hvUBVRllNOPdS/9CfymE5UqUspCLQU84IUMZHdtAP+e9mkPfV/ZYHhXs5bNhfkKVnqA3pYQDTzgTTQX4nbC4r0aMmnbhMbDYWDcHVWKy6sbAg5edEbIQsfSr8XkDIAH8PLdnG9T43m7sBLXK/BCpsqoYDpsM7eS+wQmbSubByfcok85LsN1iI5Ag/4C6ZXV9Nn9U2g8KL2+7kNxFV6+N80iAJmLQVm9uprpGl14Ii4CPIGGJ8Ol13hEsaPnPEEjZeMlo3S70tvaeFB6KDeU3bWBY/TVPxd1Ut7unCRzsDyVMherBsiiW0IXdMY6qmNG4KCqgc0TH8KZbq0PNZuxT0+jNgeANv1lkPYVSKnDrBToXAfXmVAEPnpG2YxSwoiEV85H24ZzwmVjDajnTBkbsXQmFAGECteryJsy8J2uXEi0h6OXRMnhXRBgR+tjWUZvw/1dK+JvROmA/8IAH38uZQoiTklfth+ndyniee7LxvP8rwADAMOWOd8yAn8yAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.setAttribute("headerLabel", this.getAttribute("headerLabel") || "Header");
+      },
+      editable: {
+        headerLabel: {
+          type: "text",
+          description: "Text for header label",
+          postset: function(v) {
+            this.querySelector("header").innerHTML = v
+          }
+        }
+      },
+      endpoint: true
+    });
+  </script>
+</element>
+<element name="app-image-gallery">
+  <template>
+    <link rel="stylesheet" href="css/app-image-gallery.css">
+
+    <h1>
+      <span class="folder-name"></span>
+      <span class="item-count-wrapper">
+      (<span class="item-count"></span>)</span>
+    </h1>
+
+    <div class="folder-content-wrapper">
+      <div class="data-view-toggle">
+        <a class="selected-item" show="single" href="#"><span class="icon"></span></a>
+        <a show="thumbnails" href="#"><span class="icon"></span></a>
+      </div>
+
+      <div class="show-wrapper show-single">
+        <div class="thumbnails"></div>
+        <div class="single">
+          <div class="photos"></div>
+        </div>
+      </div>
+
+    </div>
+  </template>
+  <description>
+    Shows photos that you send to it. Accepts URL to an image
+  </description>
+
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCODgzNEFCOTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCODgzNEFCQTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI4ODM0QUI3MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI4ODM0QUI4MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mOHsQwAAA9xJREFUeNrEV2toFFcUPufOhGRX0mq7uzExyRqzUfNohIrRpDQiihJRsRbxEUWxNq1KRSK0Clb6Q0QiEYw2ghUCKooP8EGCVgxqbK0kitom/rDRaG3cmBXTVM1jnbnHu0MSN+Ps7Ca7mAvD3MeZe75z5jvn3AuqymdzTm56z61HZwH6OogwEoagEUEL+tD4BuvL6+Gvhy9M5cWDAcbkN6/2zEu6eeiV/2R0LJWtzdL6cu9KEOWgU64f+/dlg/l+4IWuvj6DIW6DBUADkONm8rLZ11FitXi+A/KzR2lYq28/pbIzzVxRtf2kEAAoPZyIGRSAjfPtMCsntW88d0oSdnm5VF75hEfKw6YC+dmJ2ttzJxVa77i0fsGkeDCIhkDN56WoQQFAsa/RzgyRm0RAWCQkf2sIkGr+bNZcbZ9wHxwTGrX5X2+4VT85CpfEsllsl57yIAGjqdkJ6FsSJOTlVU9YD7NZGNZjSCT0sb3kZAuKR59MMFzXh8pSrkONEUpeSqgAUAciIsTzByCHACAirtbIPFyGXUWZ8LJT8fYmJxZBq0zbMAvSzq9dPNFmhY+GtwcMw0jVAF1KRypZndLptI9gzzuaYfuFGbEDLUYUwEtBATGGsG1lqjcjKc7a8fp/KK1eAAKEYTnGIFygIGQ0BLPhi2Q1Z6w9WuFeKLu8BB7/1xB6MdIr+8Aqw561WZpVO441QsMj80NM4fQ4PndygsRJhX2/rYK7LVcGfx5AkRM3LUqBZIcFEm0xsHtNJqycmQASQ0MPzplso69mjdH2P1S7EeoenQ7rQEKLptopN90GXrWLah+e6fIpXjHDCWXrXJRgE97Ht+kiL2MEFS9waYgq60uh+t6BAWfCfoUp02kBYY1m4cHaYth7tTBm95Wl9Kq7jTKSbHhgw0QqyLFon6Q7rbS1ME14DPH3B0fpxK2fTC2TgxWLWCvC1mVpIEsSXGs6RjWNB7W1m/+cxQeeOij6bD9kxk/D77/8FD7PalKykkey6CiJ3fr3HP/l2reMggQKC/bfNy92kuPDYehuvwcV19f3+89tnW4ouTgPjtzcLApXN+SOS5FjLRZ2/1kd/Hx1BfrIF6zJZqG/MP9jnjs+nnmVDthbsxy6lVcGUgTn7+6BBvcl+CZvvygcHHZdWgjim5Aya0AAGc5otajApXno8I0f9PGrv6TA47Z62FKVF7FyTD8uTecSk/CPpuNw+e+KSFfDdwGI65L//GtFVdytL5o8Fde/69JlOa6PEoNsSAb9Pvk0x5S3lojLaYu4nMYNxa1IpOfn4pALq8T1tPW9K1e7PR3e9tVvBBgAminfPR511i0AAAAASUVORK5CYII=">
+  </thumbnail>
+
+  <script type="text/ceci">
+    var element = this;
+    require(['https://cdn.firebase.com/v0/firebase.js'], function() {
+
+      function Editable(value, name) {
+        this.value = value;
+        this.name = name;
+        this.editor = editor;
+      }
+
+      Editable.prototype.toString = function() {
+        return this.value;
+      }
+
+      Ceci(element, {
+        init: function (params) {
+
+          t = this;
+
+          this.setAttribute('galleryName', this.getAttribute('galleryName') || 'Image Gallery');
+          //Toggle between thumbnails and single view
+          $(this).find(".data-view-toggle").on('click','a', function(evt) {
+            var show = $(this).attr("show");
+            t.changeView(show);
+            return false;
+          });
+
+          params = params ? params : {};
+          var appId = params.appId || "app123";
+          var io = new Firebase("https://flathead.firebaseio.com/" + appId + "/photo_folder/1");
+
+          var t = this;
+          t.io = io;
+          t.imageCount = 0;
+          t.currentImage = 1;
+
+          //Load up hammer-time for swiping photos left and right in the single view
+          $.ajax({
+            type: "GET",
+            url : "//appmaker-components.herokuapp.com/assets/js/jquery.hammer.min.js",
+            dataType: "script",
+            success: function(){
+              var photoViewer = $(t).find(".single").hammer();
+              photoViewer.on("swiperight",function(ev){
+                t.changeImage("previous");
+              });
+              photoViewer.on("swipeleft",function(ev){
+                t.changeImage("next");
+              });
+            }
+          });
+
+          // Changes the images when it's swiped
+
+          //Todo - clean up the duplicate code here for adding to single and thumbnail view
+          var addItem = function(photoObj,name){
+
+            //Single Item
+            var imageWrapper = document.createElement('div');
+            imageWrapper.innerHTML = "<div class='image-container'><img src=" + photoObj["url"] + " /></div>";
+            imageWrapper.setAttribute('firebasename', name);
+            imageWrapper.setAttribute("class","image-wrapper");
+
+            var deleteMe = document.createElement('div');
+            deleteMe.innerHTML = "X";
+            deleteMe.setAttribute("class","delete-image");
+            $(imageWrapper).find(".image-container").append(deleteMe);
+
+            if(photoObj["caption"]){
+              var caption = document.createElement('div');
+              caption.innerHTML = photoObj["caption"] || "No caption";
+              caption.setAttribute("class","image-caption");
+              imageWrapper.appendChild(caption);
+            }
+
+            $(t).find('.photos').prepend(imageWrapper);
+            $(imageWrapper).find("img").addClass("warp-in");
+
+            $(imageWrapper).on('click', function(evt) {
+              var fireId = $(this).attr('firebasename');
+              var fireElt = t.io.child(fireId);
+              fireElt.once('value', function(snapshot) {
+                var url = snapshot.val()["url"];
+                t.broadcast(url);
+              });
+            });
+
+            //Thumbnail Items
+            var imageWrapper = document.createElement('div');
+            imageWrapper.innerHTML = "<img src=" + photoObj["url"] + " />";
+            imageWrapper.setAttribute('firebasename', name);
+            imageWrapper.setAttribute("class","image-wrapper");
+            $(t).find('.thumbnails').prepend(imageWrapper);
+
+            $(imageWrapper).on('click', function(evt) {
+              var fireId = $(this).attr('firebasename');
+              var fireElt = t.io.child(fireId);
+              fireElt.once('value', function(snapshot) {
+                var url = snapshot.val()["url"];
+                t.broadcast(url);
+              });
+              var index = $(this).index() + 1;
+              t.changeView("single");
+              t.changeImage(index);
+            });
+
+            $(deleteMe).on('click', function(evt) {
+              var img = $(this).closest(".image-wrapper");
+              var index = img.index() + 1;
+              var thumbImg = $(t).find(".thumbnails .image-wrapper:nth-child("+index+")");
+              thumbImg.remove();
+              img.remove();
+
+              var fireId = img.attr('firebasename');
+              var fireElt = t.io.child(fireId);
+
+              if(t.currentImage == t.imageCount) {
+                t.changeImage("previous");
+              }
+
+              fireElt.remove();
+            }); // End adding an item
+
+            //Prevent image dragging on swipe
+            $('img').on('dragstart', function(event) { event.preventDefault(); });
+
+          };
+          var resetList = function() {
+          }
+          var updateList = function() {
+          }
+          this.io.on('child_removed', function(snapshot) {
+            updateList();
+          });
+
+          // This generates the aggregate stats and builds the stats tables
+          this.io.on('value',function(snapshot){
+            t.imageCount = snapshot.numChildren();
+            $(t).find(".photos").width(290*t.imageCount);
+            $(t).find(".item-count").text( t.imageCount);
+          });
+
+          this.io.on('child_added', function(snapshot) {
+            addItem(snapshot.val(),snapshot.name());
+          });
+
+        },
+        changeView : function(show){
+          var t = this;
+          $(this).find(".data-view-toggle a").removeClass("selected-item");
+          $(this).find(".data-view-toggle a[show=" + show + "]").addClass("selected-item");
+          $(this).addClass("selected-item");
+          $(this).find(".show-wrapper").removeClass("show-single").removeClass("show-thumbnails").addClass("show-" + show);
+        },
+        changeImage : function(action){
+          var t = this;
+          if (parseInt(action)){
+            t.currentImage = parseInt(action);
+          }
+          if (action == "next"){
+            t.currentImage++;
+            if(t.currentImage > t.imageCount){
+              t.currentImage = t.imageCount;
+            }
+          }
+          if (action == "previous") {
+            t.currentImage--;
+            if(t.currentImage < 1){
+              t.currentImage = 1;
+            }
+          }
+          var newLeft = 290 - (t.currentImage*290);
+          $(t).find(".photos").css("left", newLeft);
+        },
+        addPhoto : function(v){
+
+          var image = {};
+          var hasURL = false;
+          var t = this;
+
+          if(typeof v == "string"){
+            image["url"] = v;
+            hasURL = true;
+          } else {
+            var dataObj = JSON.parse(v.toString());
+            for (var key in dataObj){
+              if (dataObj[key]["name"] == "url") {
+                hasURL = true;
+                image["url"] =  dataObj[key]["value"]
+              }
+              if (dataObj[key]["name"] == "caption") {
+                image["caption"] =  dataObj[key]["value"]
+              }
+            }
+          }
+
+          if(hasURL){
+            var imgElement = document.createElement("img");
+            $(imgElement).load(function() { 
+              t.io.push(image);
+            });
+            $(imgElement).attr("src",v);
+          }
+
+        },
+        setTitle : function(v){
+          this.querySelector(".folder-name").innerHTML = v;
+          console.log(v);
+        },
+        setTitle : function(v){
+          this.querySelector(".folder-name").innerHTML = v;
+        },
+        editable: {
+          galleryName: {
+            type: "text",
+            description: "A title for your image gallery",
+            postset: function(v) {
+              this.setTitle(v);
+            }
+          }
+        },
+      defaultListener: 'addItem',
+        listeners: {
+          addItem: function (v, channel) {
+            this.lookAtMe();
+            this.addPhoto(v);
+            this.changeImage(1);
+          },
+          sendImage: function (v, channel) {
+            var t = this;
+            var photoList = this.querySelector(".single .photos");
+            var img = $(photoList).find(".image-wrapper:first-child");
+            var fireId = img.attr('firebasename');
+            var fireElt = t.io.child(fireId);
+              fireElt.once('value', function(snapshot) {
+                var url = snapshot.val()["url"];
+                t.broadcast(url);
+              });
+          },
+          clearList: function (v, channel) {
+            this.log("clearing list", channel);
+            this.io.remove();
+            this.resetList();
+          }
+        },
+        broadcast: function (url) {
+          this.emit(url);
+        }
+      });
+      callback();
+    });
+  </script>
+</element>
+<element name="app-map">
+
+  <template>
+    <link rel="stylesheet" href="css/app-map.css">
+    <div>
+      <div class="map"></div>
+      <button class="pin">pin this location</button>
+    </div>
+  </template>
+  <description>Displays a map centered on where the phone is, and optionally emits locations the user identifies.</description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAgCAYAAAAIXrg4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFRTNENTJBNzE3RkIxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFRTNENTJBODE3RkIxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkVFM0Q1MkE1MTdGQjExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkVFM0Q1MkE2MTdGQjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VjUtPgAABXdJREFUeNqkVntsU1UYP+fedn2stGsH7MlKmZONEEcAJQFkyIJhjjBE/hjCUMAsIwoucQQJiEbFyDsYcZNIUGQdwehkgsTAXBwahRCcCxDZpB0bc2OOdVvXx+7r+J27dra3XZl6ktN+955zfr/vfq/zYUIIGmsIPZ3TGIOxBKviFmOVajrCTCJCRCCi2IUQbgO5AavUdkdBmjP03LQLnaMyjkYgeQanIoY5zGjjVyCMGRR7SIhIZ4B8OxC1K4kiCSSxCECr4UA8EQXkvXKReH66gP03ryLxQTfCag1iJyYjzaOzJMPCQkH/RL4aMSxGhHiAqNRRmGEPhQsnIFI5AB8EifFerScPjr2J+U5nTPXVaTZx4pa9Hl3uAiNFIJx/u7Moc38kgSQWgyZ22IJd9sO8q/qQGsXwT9jAWDKXbPOZi7fGgwwkw+ucRdPsowTwworV6lugvd5Vc8TvOrlPOwZUKCNWrgGJYH6+HBSTvICVQ33CBDTYT8G9174XXJ/vV4IT/YJnBlIP1XltX9+RbGcdYsrhb4Z08572BwiDE7tOHVB7rzVwFAv8dyD4BVb4d4CJcMemJzHffTcUXJy4dZ/TWLD2kWif0193orOvclc8iKbgF6mSM6SM4z9iMDc1VSZDBH4tdarnykVJAY7in1rVQsElgSdNh3bwZ5fYpLNLppKmg69L9F3Cig1puryVPbCVD5pP6G6nWALFBFOtgx+STxc8l88p492XsKZcT4XmD3aTVnulmht0MdxgP26tqWJuVu6RNTYVbUyjiof6xHP5fND0+Qxm2RlUHv7jhtKZw+rkKSn04e650xHJ5qj9TP7X2nJ0SocP374+sp9V5TDgEIts7L77yphkaciOM5rC9gm9XSMLDGsZ1YzwnBIsjmtvHaCCdXmxpADGtpXrZdnf8huJJMejqAwUrhY5I9MzkUIrdf8XRz304bGtb+OsNWVSnDEB0ZlVXEZmbt4po/R/VaU0Hw5iEZ6/qyKcrxGrJszUz16EOMfNsI3exrqkvqzcQcvqMuOs197HMMOSrNd+BPmvXIqwn35OnpwXROAasL+labEmK7eBa/ud3NucH9Xm2nlLienZUqSbPkte991uIgO1H+No4HSkV9aTuKnZGOrSPHxnWarWerr5FmtKtHXtXIN81xvR/xk6sETKnhok+YZut62ank3tN8z/2UYrKLKUbCMQu/8dHc6a11WMlIDeLrmiMnApkJ69Lx+HS6ZVkz0bGxavFBVhOO5hyCtC2pw5SHL3O3o/3FEtE9CfjE9/8YtuVzmVE1/aLWKNjqb+eInkPXAGWTbulGX+fkeFr/ln/yiBHKbJ1m/JsK+WtUyOSyx9y03zJYSAPKxsW17cLqgmpWLR1fNd55ZldcFFZQy/AgWqHwqcWZc7fyCwTqLU/rBn7YzHialoE0sEwS26/ioLfH30S59WV+gUTsHGgfaN8wnxe41RFPmHCUyTXlUvggVYyet+oe257JOh6xEHAbwaatCXrHmSKWlH1QN4xcWwPT+54siQDO4bOq8ER2NqhnEZkHRDx5BpLFx/T25NIsE5c0nFjfiFhQYw6304tCEqVIzGKw9mPdhV7Hy1wMc5bplCCbQz5nakHqhNgZIJ9UxY6lxubVACRO+LwscumO+IfT1DHaWLNJLHzcpV2GASphz7gQMz0uvyDbjc340GjmI5LzDeA+0uQegaknaf4OCeRfSuTdr1iQxO1+iemMn9kC+ANtJtxhrtr+B8q/vimUFoKfkJ+asToUlwSn7vXHBs31jaj4tgpAm+NxuSqJG2kyMeIB5IyvlYq28G80QFjh1FiqGanH4dbrySQAKJEDVrKfi46h8h/6qubQ5k8UfjPfC3AAMA21+By9WDUnsAAAAASUVORK5CYII=">
+  </thumbnail>
+  <script type="text/ceci">
+
+    function Location(value) {
+      this.value = value;
+      this.editor = 'app-map';
+    };
+    Location.prototype.toString = function() {
+      return String(this.value);
+    }
+
+
+    var element = this;
+    require(['http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js'], function(L) {
+      Ceci(element, {
+        init: function() {
+          element = this;
+          var locateAtStart = false;
+          var lat = this.getAttribute('lat');
+          var lng = this.getAttribute('lng');
+          if (! this.hasAttribute('lat')) {
+            lat = "51.2982709";
+            lng = "-116.96357390000004";
+            locateAtStart = true;
+          }
+
+          var map = L.map(
+            element.querySelector('.map'), {
+              center: new L.LatLng(lat,lng),
+              zoom: 4
+            }
+          );
+
+          L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {maxZoom: 18}).addTo(map);
+          var t = element;
+          t.map = map;
+
+          map.on('locationfound', t.onLocationFound);
+          map.on('locationerror', t.onLocationError);
+          map.on('moveend', t.noteLocationChange);
+          console.log("locateAtStart", locateAtStart);
+          if (locateAtStart) {
+            map.locate({setView: true, maxZoom: 16});
+          } else {
+            this.centerOn(lat, lng);
+            this.setZoom(5);
+          }
+
+          element._pin = element.querySelector(".pin");
+          element._pin.onclick = function(e) {
+            element.broadcast(element.map.getCenter());
+          }
+          element._pin.onclick();
+          if (! this.hasAttribute('pin')) {
+            this.setAttribute("pin", "false");
+          }
+          this.controlPin(this.getAttribute('placeholdertext') == "true");
+        },
+
+        noteLocationChange: function(e) {
+          var center = this.map.getCenter();
+          this.currentCenter = center;
+          element.setAttribute('lat', center.lat);
+          element.setAttribute('lng', center.lng);
+        },
+
+        getCurrentValue: function() {
+          return this.currentCenter.toString();
+        },
+
+        onLocationFound: function(e) {
+          var radius = e.accuracy / 2;
+
+          L.marker(e.latlng).addTo(this.map)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+          L.circle(e.latlng, radius).addTo(this.map);
+        },
+
+        onLocationError: function(e) {
+          alert(e.message);
+        },
+
+        sendCenter: function (e) {
+          this.emit(new Location(e));
+        },
+
+        controlPin: function(truefalse) {
+          if (truefalse) {
+            this._pin.classList.remove('hidden');
+          } else {
+            this._pin.classList.add('hidden');
+          }
+        },
+
+        broadcast: function(e) {
+          this.sendCenter(e);
+        },
+
+        editable: {
+          "location": {
+            title: "Location",
+            type: "text",
+            description: "Set where the map should be centered (empty means where the phone is)",
+            postset: function(v) {
+              this.findLocationByName(v);
+            }
+          },
+          "pin": {
+            title: "Show pinpoint button",
+            type: "boolean",
+            description: "Show the button that emits current location",
+            postset: function(v) {
+              element.controlPin(v);
+            }
+          }
+        },
+        centerOn: function(lat, lng, type) {
+          var location = new L.LatLng(lat, lng);
+          this.map.panTo(location);
+
+          if (type == 'city' || type == 'administrative') {
+            this.map.setZoom(11);
+          } else {
+            this.map.setZoom(13);
+          }
+        },
+        defaultListener: "findLocationByName",
+        listeners: {
+          recordLocation: function(val) {
+            this.broadcast(this.map.getCenter());
+          },
+          centerOnLocation: function(location) {
+            this.map.panTo({'lat':Number(location.lat), 'lon':Number(location.lon)});
+          },
+          centerOnPhone: function(val) {
+            this.map.locate({setView: true, maxZoom: 16});
+            this.map.setZoom(10);
+          },
+          findLocationByName: function(val) {
+            if (!val) {
+              this.centerOnPhone();
+            } else {
+              $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=5&q=' + val,
+                function(v){
+                  element.centerOn(v[0].lat, v[0].lon, v[0].osm_type)
+                });
+            }
+          }
+        }
+      });
+      callback();
+    });
+  </script>
+</element>
+<element name="app-menu">
+  <template>
+    <link rel="stylesheet" href="css/app-menu.css">
+    <style type="text/css">
+    </style>
+    <header>
+      <div class="menu-icon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <span class="menu-title">Menu<span>
+    </header>
+    <div class="menu-wrapper">
+      <a href="#" class="menu-item">Item 1</a>
+      <a href="#" class="menu-item">Item 2</a>
+      <a href="#" class="menu-item">Item 3</a>
+    </div>
+  </template>
+  <description>
+    I'm a page header. I don't listen or broadcast.
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBQjQ0QTNERjdCRkFFMjExOTI3Q0ZCMTdDMTBCM0U2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBDNTE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBDNDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2QzRDQUJGQjdGQ0UyMTFCOTkwRkVEOUIzNUFDOTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCNDRBM0RGN0JGQUUyMTE5MjdDRkIxN0MxMEIzRTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+R5uPDQAAAJlJREFUeNpi+P//PxsQTwTit//pB95B7WRjBBITGBgY8hkGBnSCHPAWyBDKm3aF4fKDz3SxVVeBl2FSlg6I+Y4JZDmIRS/L0ewSYmIYYDDqgAF3AAsxivZ3WZJluGPZ8WESAsT4ZDQRjjpgNBuOZsNRB4xmw9FsOJoIRx1AiQPewbpL9AI6CLveDXTntIsBqXv+biC65wABBgC2kCLiOAVVsQAAAABJRU5ErkJggg==">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.mode = "off";
+        this.setAttribute("menuTitle", this.getAttribute("menuTitle") || "Menu");
+        this.setAttribute("menuOptions", this.getAttribute("menuOptions")|| JSON.stringify(["Option 1","Option 2","Option 3"]));
+        var t = this;
+        $(this).on("click", ".menu-icon", function(){
+          $(t).find(".menu-wrapper").slideToggle();
+        });
+      },
+      buildMenu : function(v){
+        var options = JSON.parse(v);
+        this.querySelector(".menu-wrapper").innerHTML = "";
+        for(var key in options) {
+          var item = document.createElement("a");
+          item.setAttribute("href","#")
+          item.classList.add("menu-item");
+          item.innerHTML = options[key];
+          this.querySelector(".menu-wrapper").appendChild(item);
+        }
+      },
+      editable: {
+        menuTitle: {
+          type: "text",
+          description: "Text for header label",
+          postset: function(v) {
+            this.querySelector(".menu-title").innerHTML = v
+          }
+        },
+        menuOptions: {
+          type: "multiple",
+          description: "Menu Options",
+          postset: function(v) {
+            this.buildMenu(v);
+          }
+        }
+      },
+    });
+  </script>
+</element>
+<element name="app-metronome">
+
+  <template>
+    <link rel="stylesheet" href="css/app-metronome.css">
+    <div class="metronome-wrapper">
+      <div class="metronome-shadow"></div>
+      <div class="metronome-body">
+        <div class="metronome-hole"></div>
+        <div class="metronome-arrow"></div>
+      </div>
+    </div>
+  </template>
+  <description>Counts the beat and sends out the beat count</description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQjQxQzYzRjE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQjQxQzY0MDE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRCNDFDNjNEMTgzRjExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCNDFDNjNFMTgzRjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+a4My1QAAA8ZJREFUeNrEV8lPE1EYn/emO6UUQRLRoFGwnEz0oiQmmBgSOSgCBTXxpPGgRg8e9OABZKls4sF4wOASxL/BqwuKGJF9C4ImhsSoBQ1KZ6adeb73ZqaOwwwd2qov+dJvtve+7/f7tgKEEJPkYrHsV/Q+LGJSuxADrMrcoXwqWGelWHQaqUsSp8g9zXPLApMxWlr+1gZYW4CfHf0uzE+EGQCLkcA1q8/nyzdb3suyAeqmuRdb7QzLBom+2N3gC9+p98s7sdXbHy/Y1uvMuhHwHjjaDD2ZBdz4KxQZ7QeRkZeQnxleBjZ7IX5c91cNIN4D1l5F9KWHHTSEKBI9rYISUEEVBas0wPXAn3kw2Agczh3c5Bsee68+BpG3z7zRj7MLDADFWhSsGAGtHo49YzHPsvc9bfrXHF+76qEehbRSgLiVEOa5iJ8ZWomMvFC/A3EUBp/kCB+mP60XBWgJ+rJaF/6ppXzfDxHdbvC6PdzdiIxQWMsISwjknKlrBi7PNm58QCJRb/IaQcGvooDE2LWUKNDmPbA7lMhvVyFHutJLriUSC7guuOkdUTyec7bRmXIM0MiXvRdJ3msOZLXeKwIjQ899uEZIOFu2e0srWhLRABPlPS6z1dT73g5kcCBjcA/gGkH3hU53ZaKMgEbQ/877mgYMfyHOewFzr/fYdJEawY31I4zc1kQZYYoAzXsAgnLet7Imh0pm3y/13pC5EmO1a6EA1+x4xPuJ1zGd9/HAwxtDLGYoAIwch7vmTgZJ9WYoQKPI9+wt8zAQ1ipVz2pVWzXZ4KxRETKtjtDIstxzTe0ww7dF6XhG9BABZteqQZHhPhv/bmwJB3IAxaINRmetosAZ2O0DroxKpeMBJrXlWOxu9Chxa4iC3gCQd+V2G+vL3mTmvT5TjK61mYL7hgP3j5/AZisymhegjns36806rO/3KS6w+KBFRhJJNfp54Q8Ecs+H2mCmP1+ddhLlu9WFY8HFz42T2TGgrwtQtcS9q8QLnO6qNHGvzwyweC8UM+qUcQQ2Xropcz/Wz5hxn6QBSJ6anmYL85Nf6LygqQvUgKwjp5x40KzQVrA0LaBBwR6+26ToID5BUwP8xy5ouU+3AUAt2RgFr/B+6jOdFwSuiRrg3lOagUtuUBP56Yp+/axAQy3cVeeXe4R4wld+0gPzLt9qot7L3IM0H66ibFPRIHWBzAvQnVGw4fTVBoiVfdT7R52SrsuhBMYgE10yQSC+51JvJ0/5cbpLGImPtKD/tKSoEKL/ZokR4sqPwX92MM8NYLlOzv4lwADhQ/6sG+xnUQAAAABJRU5ErkJggg==">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function() {
+        this.period = this.getAttribute("period") || 1;
+        this.count = 0;
+        this.tick();
+        this.timeout = null;
+        this.setArrowSpeed(this.period);
+      },
+      setArrowSpeed : function(v){
+        var animDuration = v*2;
+        var metronomeArrow = this.querySelector('.metronome-arrow');
+        metronomeArrow.classList.remove("metronome-animation");  
+        metronomeArrow.offsetWidth = metronomeArrow.offsetWidth;      
+        metronomeArrow.classList.add("metronome-animation");
+        metronomeArrow.style.webkitAnimationDuration = animDuration + "s";
+        metronomeArrow.style.animationDuration = animDuration + "s";
+      },
+      broadcast: function (e) {
+        this.emit(e);
+      },
+      onUnload: function (e) {
+        clearTimeout(this.timeout);
+      },
+      tick: function() {
+        if (this.unloaded){
+          // This stops the setting of the next setTimeout
+          return;
+        }
+        this.count++;
+        this.broadcast(this.count);
+
+        // Emitting Animation Beta
+
+        var t = this;
+        var defer = function(){
+          t.tick();
+        };
+        this.timeout = setTimeout(defer, this.period*1000);
+      },
+      editable: {
+        "period": {
+          title: "Metronome Period",
+          min : .1,
+          max: 100,
+          type: "number",
+          description: "Set the period between metronome ticks",
+          postset: function(v) {
+            this.setArrowSpeed(v);
+          }
+        }
+      },
+      listeners: {
+        setPeriod: function (val) {
+          val = parseInt(val);
+          if (val > 0) {
+            this.period = parseInt(val);
+          }
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-multi-line-input">
+  <template>
+    <link rel="stylesheet" href="css/app-multi-line-input.css">
+    <div class="outer-wrapper">
+      <div class="inner-wrapper">
+        <textarea></textarea>
+      </div>
+    </div>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNDVCOTVDODE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNDVCOTVDOTE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM0NUI5NUM2MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM0NUI5NUM3MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yROonAAAAKBJREFUeNpi/P///0cGBgY+hoEBnxiBDvjPMICACYmdDcSMdMLZMEuRQ4CRzp7/jx4CAx4FAwJY0INkRIYA44hOA6MOADngMDQHDAQ+PKjqAls61gW2o3XBaF0wWheMFsWDygE6VK4PDkPNJLI4+v//8H/qA5CZDMRgeFF8z1OaKkGqtP0pAylF+2giHHAHDHgiBBE6VHbEYaiZRDkAIMAAi4iybzxuY5IAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    A basic textarea
+  </description>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.textarea = this.querySelector("textarea");
+        var element = this;
+        if (! this.hasAttribute('defaulttext')) {
+          this.setAttribute('defaulttext', 'Enter some text');
+        } else {
+          this.textarea.setAttribute('placeholder', this.getAttribute('defaulttext'));
+        }
+        this.textarea.addEventListener("input", function (e) {
+          element.broadcast(element.textarea.value);
+        }, false);
+      },
+      broadcast: function(val) {
+        this.emit(val);
+      },
+      listeners: {
+        setValue: function (val) {
+          this.querySelector('textarea').value = val.toString();
+        }
+      },
+      editable: {
+        defaultText: {
+          type: "text",
+          description: "The text you want your input field to show by default.",
+          postset: function(v) {
+            this.querySelector("textarea").setAttribute("placeholder", v);
+          }
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-number-checker">
+  <template>
+    <link rel="stylesheet" href="css/app-number-checker.css">
+    <div class="checker">
+      <select id="blah">
+        <option selected="selected" value="greater">Greater than</option>
+        <option value="greaterEqual">Greater than or equal to</option>
+        <option value="equal">Equal to</option>
+        <option value="notEqual">Not equal to</option>
+        <option value="lessEqual">Less than or equal to</option>
+        <option value="less">Less than </option>
+      </select>
+      <input type="number" value="3" />
+      <div class="check-indicator">
+        <div class="check-light"></div>
+        <div class="indicator-sheen"></div>
+      </div>
+    </div>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBCQzE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBCRDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQxRkM0RTE1MTgyNDExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQxRkM0RTE2MTgyNDExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+z5Wj6AAAANlJREFUeNpi+P//PxsQTwTit//pB95B7WRjBBITGBgY8hkGBnSCHPAWyBB6VhLI8OPqKbrYyqFtxiDVsx7EfMcEshzEopflaHYJMTEMMCDLAUrbn4LxgDmAmoAFmyAogYASCjEhQUq8gxL6wIUAIyPxIYDNpdh8fs9TepimAUKAGj4fNCFAEweQUk4M7XKAlHJieJUDxPqcmNwyNMsBapYTg78coGbdP7TLAUpDYeiWA9Ss+4dmOUArnw+qcuAdrLtEL8ChZQpjvhvozmkXA1L3/N1AdM8BAgwADzZI6AxSF6UAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    Listens for a number and checks if it meets certain criteria
+  </description>
+  <script type="text/flathead">
+  </script>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.count = 0;
+        this.incomingNumber;
+        this.checkAgainst = 3;
+        var that = this;
+        this.indicator = this.querySelector(".check-indicator");
+
+        this.querySelector("input").onchange = function(e){
+          that.checkAgainst = e.target.value;
+        }
+
+        var checkOptions = this.querySelector("select");
+        this.checkFor = checkOptions.options[checkOptions.selectedIndex].value;
+
+        checkOptions.onchange = function(e){
+          if (!e)
+          var e = window.event;
+          that.checkFor = this.options[this.selectedIndex].value;
+        }
+      },
+      checkTheNumber: function () {
+        that = this;
+        var ok = false;
+
+        switch (this.checkFor) {
+          case 'greater':
+            if(this.incomingNumber > this.checkAgainst){ ok = true; }
+          break;
+          case 'greaterEqual':
+            if(this.incomingNumber >= this.checkAgainst){ ok = true; }
+          break;
+          case 'less':
+            if(this.incomingNumber < this.checkAgainst){ ok = true; }
+          break;
+          case 'lessEqual':
+            if(this.incomingNumber <= this.checkAgainst){ ok = true; }
+          break;
+          case 'equal':
+            if(this.incomingNumber == this.checkAgainst){ ok = true; }
+          break;
+          case 'notEqual':
+            if(this.incomingNumber != this.checkAgainst){ ok = true; }
+          break;
+        }
+        if(this.incomingNumber == false){
+          ok = false;
+        }
+        if(ok == true){
+          this.indicator.setAttribute("light","good");
+          this.emit(this.incomingNumber);  
+        } else {
+          this.indicator.setAttribute("light","bad");
+        }
+        el = this.querySelector(".check-light");
+        el.classList.remove("check-strobe");
+        el.offsetWidth = el.offsetWidth;
+        el.addEventListener('webkitAnimationEnd', function(){
+          el.classList.remove("check-strobe");
+        });
+        el.addEventListener('animationend', function(){
+          el.classList.remove("check-strobe");
+        });
+        el.classList.add("check-strobe");
+      },
+      editable: {
+        countItem: {
+          type: "text",
+          description: "Name for what you're counting",
+          postset: function(v) {
+          }
+        }
+      },
+      broadcast: function () {},
+    defaultListener: 'checkNumber',
+      listeners: {
+        checkNumber: function (listener,channel) {
+          this.incomingNumber = parseInt(listener) || false;
+          this.checkTheNumber();            
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-piechart">
+  <template>
+    <link rel="stylesheet" href="css/app-piechart.css">
+    <div class="sheen"></div>
+    <canvas id="canvas" width="200" height="200" />
+  </template>
+  <description>
+    Listens for a message and counts
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMkYwNDQzMzE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMkYwNDQzNDE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEyRjA0NDMxMTgwNjExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEyRjA0NDMyMTgwNjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+eH4R/gAABU5JREFUeNrEV1tsFFUYPufMzN662223F4XWtrJQCsVCEQ23EDFWCI2JPGCIJhLjm4mYJqahiEqEqOHBEBIjD0IaQ/HFaFJM1KiFBxVC0oItxYJc2tSWtst22253d2Zn5hz/M724HXdmh6rxJH/OZc6c//+//3YOZowhJ20yoQW8bvKcSPBTMF2HMa7CGOXD7xjOiKs6G4T1K7D2g0sk7TCednQwF8COJqbVlYmUdkbXaYo5bJSyBOw/BcPluc7HNgh4VI0eFQWyH7SS+LZrA3F68XoM9fRPoaH7MoqnNAz7cMArorJiD1pTGWCba0MUegFj44w00HGgd4HkbEysBAjD8pdwSB3//G3nGG37cYgMRWVHqJYVedjLDeVKQ32JG87golwF2gN0y4kA62HpG/ixNDKZTr/z2Q2xb3CaoEW0VRX+5LFXV8l+rxiC6SjQLqAuOwHAZugiMC/uHYin3mrtc4PzZTKf24ydClHgl/441bR2KhSQVsM0ArQ5E4lMAbwwvMRhv3J7Umn+9DeXpjMzI5aDebbvTBLJzTPN9XJpgWstzLuBNgKl+Md57YDZEc58OCqrh1pvmJmbNWc2Api/YXDm6lc+uupLyvowzOuADs99NAQYiSk1AsFvQPigI2d/F5OKno35gkMtBLDyFQzMwy2tfQlAmcK8iZvb+GF780XgjT4E7cXvOiMIHA5nYZbNFFbNSnjSfWeq6vKNiTsw5mHdYizu2bZkaSjg2sVdoa1jyFHusoAaOTCL+PG5/oLZ+d5743KQPFld8JIoYKn7LiQXZ3GOZ6HOFQkcan22p3MOOhhJFUGEqYC4zy0Juwlo/wzffakvhv7lhmcZE5PA+KfecYkPwPY7RIjPSj7p7Y//FwJI2ZC6PjDjZy4J14r5PrGITwD+JM//Jvj4RiHDEdmDen+2RTCD0UsCqeCJSOHC6JSpAIm0GFUhkpgpR9j6B/gc+v6DjVAN0V9pVkAqQf9DExGj0wiTULKjAjFl1Bw6Zq0yNYvnNbLADM4UlCHYaZ3g5duo1RpVCNOmRgwj5q0QLELNKuwC81oQ3S4HqGbfeaTEO6NBUrtPWHqs3xCgYNOiYSRIZzZO+DdEVlf6jT4aTw8Qpox0GD5Q2milAUU5M45Abc1sahtrCo1+NKZcIDR6/nNE06pQtA3MsNwqxDQ7ATQq6A5TMr8tobpH8xFUSP1Cd7SNpG8evsfU8XaOlBRuyQallsuxMhwwZ3txexni98XhcaXj/K/RuwQ8mSEh7yAco4nl+zAJbjDbUMjI5VYVkTgoRvrKcr+yc0MJj399ZFw+eP7YppnYx2LgJpjhBMICctef1bHoNwsh5gxnG9h573MLsaP7VsoEwErI2icHTvd1LZScuA8BCL08HN3rv9ARcdl5s5Or2byPwpUscuK12kRx0BUE7a/BI+YAaE/N0KUAiuchMUWFkh2C54mvVRMSdjk+s05kRgQGzSdO7n8sGV6SV8UvpWD/3YV+KWFlu1uQFZ8FISJCcYPk2dqlk+DjDsoey0RkHq3q8jza+uY617KHfctmr+U7zW+DbM7TBULA1Zn1cHN4t1xG7rrTlPjC1okIL0gDeCk8TJpfCNOTr9eRkqArAOL1wPpW85vA7mVkPM0AifcgZpq4m8IY6bGfmT7ajmnsF0STt5Hv6X6mM5Hufb8TPRTKE9ZUBdiW2hCDpxnhocarHVSJ41Bl37Z6muV8nAKtYHqqlVFNfoDHqZxUtDOTCbXmnzxOF6bbyc4gdPsgWhqxq6gaS0WFECk+4xtl8YSij6VV2uN1Ced8HuErp8/zPwUYACrO7BuLatvJAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <script type="text/flathead">
+  </script>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.pieSize = 200;
+        this.colors = {
+          "blue" : "#2f8bd1",
+          "green" : "#6fba00",
+          "yellow" : "#e6d400",
+          "orange" : "#ff7b00",
+          "red" : "#eb1900",
+          "pink" : "#ff4fa7",
+          "purple" : "#a016d2"
+        }
+        this.myColor = ["DDD","DDD","DDD"];
+        this.myData = [0,0,0];
+      },
+      updatePie : function(){
+        var pS = this.pieSize;
+
+        var myTotal = 0;
+        for (var j = 0; j < this.myData.length; j++) {
+          myTotal += (typeof this.myData[j] == 'number') ? this.myData[j] : 0;
+        }
+
+        var canvas;
+        var ctx;
+        var lastend = 0;
+
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, pS, pS);
+        ctx.textAlign = "center";
+
+        for (var i = 0; i < this.myData.length; i++) {
+          ctx.fillStyle = this.colors[this.myColor[i]];
+          ctx.beginPath();
+          ctx.moveTo(pS/2,pS/2);
+          ctx.arc(pS/2,pS/2,pS/2,lastend,lastend+(Math.PI*2*(this.myData[i]/myTotal)),false);
+          ctx.lineTo(pS/2,pS/2);
+          ctx.fill();
+
+          var angle = lastend + (Math.PI*2*(this.myData[i]/myTotal)/2);
+          var x = 100 + 50 * Math.cos(angle);
+          var y = 100 + 50 * Math.sin(angle);
+          var fontSize = 10 + (40 * this.myData[i]/myTotal);
+          ctx.font = fontSize + "px sans-serif";
+
+          if(this.myData[i] > 0){
+            ctx.fillStyle = "rgba(255,255,255,.3)";
+            ctx.fillText(this.myData[i], x , y+5);
+          }
+
+          lastend += Math.PI*2*(this.myData[i]/myTotal);
+        }
+      },
+      updateData : function(listener,channel,option){
+        if(parseInt(listener)){
+          listener = parseInt(listener);
+          this.myData[option] = listener;
+          this.myColor[option] = channel;
+        } else {
+          this.myData[option] = this.myData[option] + 1;
+          this.myColor[option] = channel;
+        }
+        this.updatePie();
+
+      },
+    defaultListener: 'setFirstValue',
+      listeners: {
+        setFirstValue: function (listener,channel) {
+          this.updateData(listener,channel,0);
+        },
+        setSecondValue: function (listener,channel) {
+          this.updateData(listener,channel,1);
+        },
+        setThirdValue: function (listener,channel) {
+          this.updateData(listener,channel,2);
+        },
+        resetValues: function (value, channel) {
+          this.myData = [0,0,0];
+          this.updatePie();
+        }
+      },
+      endpoint: true
+    });
+  </script>
+</element>
+<element name="app-randomcat">
+  <template>
+    <link rel="stylesheet" href="css/app-random_cat.css">
+    <div class="wrapper"><img style="width: 30%" /></div>
+  </template>
+  <description>
+    Shows a super random cat
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCODgzNEFCOTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCODgzNEFCQTE4MDExMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI4ODM0QUI3MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI4ODM0QUI4MTgwMTExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mOHsQwAAA9xJREFUeNrEV2toFFcUPufOhGRX0mq7uzExyRqzUfNohIrRpDQiihJRsRbxEUWxNq1KRSK0Clb6Q0QiEYw2ghUCKooP8EGCVgxqbK0kitom/rDRaG3cmBXTVM1jnbnHu0MSN+Ps7Ca7mAvD3MeZe75z5jvn3AuqymdzTm56z61HZwH6OogwEoagEUEL+tD4BuvL6+Gvhy9M5cWDAcbkN6/2zEu6eeiV/2R0LJWtzdL6cu9KEOWgU64f+/dlg/l+4IWuvj6DIW6DBUADkONm8rLZ11FitXi+A/KzR2lYq28/pbIzzVxRtf2kEAAoPZyIGRSAjfPtMCsntW88d0oSdnm5VF75hEfKw6YC+dmJ2ttzJxVa77i0fsGkeDCIhkDN56WoQQFAsa/RzgyRm0RAWCQkf2sIkGr+bNZcbZ9wHxwTGrX5X2+4VT85CpfEsllsl57yIAGjqdkJ6FsSJOTlVU9YD7NZGNZjSCT0sb3kZAuKR59MMFzXh8pSrkONEUpeSqgAUAciIsTzByCHACAirtbIPFyGXUWZ8LJT8fYmJxZBq0zbMAvSzq9dPNFmhY+GtwcMw0jVAF1KRypZndLptI9gzzuaYfuFGbEDLUYUwEtBATGGsG1lqjcjKc7a8fp/KK1eAAKEYTnGIFygIGQ0BLPhi2Q1Z6w9WuFeKLu8BB7/1xB6MdIr+8Aqw561WZpVO441QsMj80NM4fQ4PndygsRJhX2/rYK7LVcGfx5AkRM3LUqBZIcFEm0xsHtNJqycmQASQ0MPzplso69mjdH2P1S7EeoenQ7rQEKLptopN90GXrWLah+e6fIpXjHDCWXrXJRgE97Ht+kiL2MEFS9waYgq60uh+t6BAWfCfoUp02kBYY1m4cHaYth7tTBm95Wl9Kq7jTKSbHhgw0QqyLFon6Q7rbS1ME14DPH3B0fpxK2fTC2TgxWLWCvC1mVpIEsSXGs6RjWNB7W1m/+cxQeeOij6bD9kxk/D77/8FD7PalKykkey6CiJ3fr3HP/l2reMggQKC/bfNy92kuPDYehuvwcV19f3+89tnW4ouTgPjtzcLApXN+SOS5FjLRZ2/1kd/Hx1BfrIF6zJZqG/MP9jnjs+nnmVDthbsxy6lVcGUgTn7+6BBvcl+CZvvygcHHZdWgjim5Aya0AAGc5otajApXno8I0f9PGrv6TA47Z62FKVF7FyTD8uTecSk/CPpuNw+e+KSFfDdwGI65L//GtFVdytL5o8Fde/69JlOa6PEoNsSAb9Pvk0x5S3lojLaYu4nMYNxa1IpOfn4pALq8T1tPW9K1e7PR3e9tVvBBgAminfPR511i0AAAAASUVORK5CYII=">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      percent : 0,
+      init: function (params) {
+        var cat = this.querySelector("img");
+        var t = this;
+        cat.onclick = function(){
+          var img = t.querySelector("img");
+          t.broadcast(img.src);
+        };
+        var percent = 80;
+        this.changeCat();
+        this.setAttribute('catwidth', percent);
+      },
+      broadcast: function (e) {
+        this.emit(e)
+      },
+      editable: {
+        photoStyle: {
+          options : ["Color","Black and White"],
+          type: "select",
+          description: "Pick what kind of photo you'd like.",
+          postset: function(v) {
+          }
+        },
+        catWidth: {
+          min : 0,
+          max: 100,
+          type: "number",
+          description: "Set the width of your cat",
+          postset: function(v) {
+            this.setWidth(v);
+          }
+        }
+      },
+      defaultListener: 'changeCat',
+      listeners: {
+        changeCat: function () {
+          var type = "";
+          if (this.getAttribute("photoStyle") != "Color"){
+            type = "/g/"
+          } else {
+            type ="";
+          };
+          var cat = this.querySelector("img");
+          var random = 600 - Math.floor((Math.random()*500));
+          var src = "http://placekitten.com/"+type+random+"/"+random;
+          cat.setAttribute("src", src);
+        },
+        setWidth : function(val){
+         this.querySelector("img").style.width = val + "%";
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-star-rating">
+  <template>
+    <link rel="stylesheet" href="css/app-rating.css">
+    <div class="wrapper">
+      <div class="rating-bar"></div>
+    </div>
+  </template>
+  <description>
+    A rating bar you can rate items with.
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMkYwNDQyRjE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMkYwNDQzMDE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEyRjA0NDJEMTgwNjExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEyRjA0NDJFMTgwNjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ZLW4EwAABNJJREFUeNrEV2tsFFUUvndmn215tBab2jYqKPjHBzER27S1hmIxICpKACH4ij9M/GfSH2rURP8YTEiIiQkoKdEQm4KNCMqWtEGQxkAktVZDG6hNS9lHC9p2Z2Zn5j48d2a23e52u7NrGic5c2/uved83z3n3BfmnKP/88P/gcBmkHqnfgEkVJAVQaAA2cwzv5ZCbBVGgGrfCERj5LMBc/SLyxY8M44VYquQEEggFKgjtWc1RRiToieH/YiTcYQ91YUYyy9k5j/bRMmm+w2ujUhc/cvHpvsIgFdxMrN1yQkAhV3iT8LtHpHEQkj4uOz07V5yAlgK1ImShk/M6tLwcWz3+eqWmkAzkoM1LP4nYcrQbCNTBoVQJAXuQSyxcSkJbHdmz9I75trwi4VuRBUgJTnGd4I8qJ1/iLGZ3+eRl5avN4MNV7yQpQMIe5/LYScOEk0SKIPyEMgLrlIwMR5Xu6sXIsqKNo6ZOFDtd5nM3wL8KyKTP7fAqTbDzVs+xJmT0ZjBGueCoy0cQ59kjh7yZQunOXrY66153URyIIGQDHuEBDY8xNJlhs8SYdlbSiCXRDg14YGbUKnUzt3fxZRrzcmllZxVSulJUk/pz/YxZwyAI8PREeBe0ScVr+0PNg2uh/qo5BwkKFD3ywa5tE5P9ZGTpFIKOHIBnkxu7AAWO7llzV4qreWB2nMP2AjsZycH+DEY3wLbKTcG38Xm9f0OvvvdKTcxzL33vaP51n4YhLBASPRuJPmfn1sFVD2K5KJ9VnUihPS+fYgbMbdANGXWmdD+CuR/5Gsqlzfb+cWMNuVH/2vFWzifJaCcxjj4xB97cKDqAPasKOd6BEjs5XSy243LBQF5oQ65fBOAf8WBBMw6cQN4voUk33dZLyQk3HGvXFbfhv2VjRAjZF7/hBtD78MKIIt5IbMNe5Bv3UfIu7pV7NGI6+HzXB15CXJgPOeNCLwhFbVMH8GeZS9b0/v7ItIvbQEOU67iDssMBR77AUkrH7cHaqMn1J67d4HLSV5XMq6NPYWDNSEBrJ69U8QuncDCq0Lyo6JNE+CEZYhGOncnft3eLuKd/1kg+zdYHoieTAdPXe+ZhpkOiXyGWgDlzTXZwBclIJISGFgXDBLpzLYa5BQP8PmHU0eyfWtBt2Jys32N566d1xBVkHJ2FVjUcrt+Xg6WiDBwOKIx16MVsApieXlAWv7wXovIxJlU8CQwBgAGa5sIgbqR7gFO4hCGLnsrl4t35B0C7F35tHPbyXC/tOJRLdg4YHiq9niEBJuGNGibSicBVzXLPsbSs3mFgN6+sEoua4iJZBLZz8n03Ha6pvWWb93HpeBjGc7+n2AOcLeWm+CuToyrrZo5fKDEOv3sSUAYYqKCnPNAcfUwofHBt8VVn0S/5/FTyBKl6w5KJntuzz5DGD2SovNlsplET2swdlaPxELMGq7deNP1wwQGnxRKid9etYxovY2cJSKGgzwOvx0L6O0EUhEHjGi9DZZuov8NWysR7nBFAJQwM2f6hJJ6sZbqgx+ANnGwySn4Vy7y0qnkNBGyx5pcv/oe03rrqe0a9bJ7D5hTB9MffsycPur6yUWUtoyXI1E/dU3A9gKQIMoVpo0dZsrwtnzffEyfeIbpkwfhHXkJvLI/27h/BRgAK3F8EF7rH/AAAAAASUVORK5CYII=">
+  </thumbnail>
+  <script type="text/ceci">
+    function Scalar(value) {
+      this.value = value;
+      this.editor = 'app-rating';
+    };
+    Scalar.prototype.toString = function() {
+      return String(this.value);
+    };
+    Ceci(this, {
+      init: function (params) {
+        var rating = 0;
+        this.ratingBar = $(this).find(".rating-bar");
+        this.setAttribute('starNumber', this.getAttribute('starNumber') || 5);
+        this.ratingBar.on("click",".rating-icon",function(){
+          var index = $(this).index();
+          that.updateBar(index + 1);
+          that.sendRating(); 
+        });
+        var that = this;
+        //Load in external script
+        $.ajax({
+          type: "GET",
+          url : "//appmaker-components.herokuapp.com/assets/js/jquery.hammer.min.js",
+          dataType: "script",
+          success: function(){
+            var rBar = that.ratingBar.hammer();
+            
+            rBar.on("touch",function(ev){
+              if($(ev.target).hasClass("rating-icon")){
+                index = $(ev.target).index();
+                that.updateBar(index + 1);
+              }
+            });
+
+            rBar.on("drag",function(ev){
+              if($(ev.target).hasClass("rating-icon")){
+                index = $(ev.target).index();
+                that.updateBar(index + 1);
+              }
+            });
+
+            rBar.on("dragend",function(ev){
+              that.sendRating();
+            });
+          }
+        });
+      },
+      editable: {
+        starNumber: {
+          type: "number",
+          description: "Pick how many stars the rating can be",
+          postset: function(count) {
+            this.buildStars(count);
+          }
+        }
+      },
+      buildStars: function (count) {
+        this.ratingBar.html("");
+        for(var i = 1; i <= count; i++){
+        this.ratingBar.append("<div class='rating-icon'></div>");
+        }
+      },
+      updateBar : function(rating){
+        this.clearBar();
+        ratingIcons = this.ratingBar.find(".rating-icon");
+        ratingIcons.each(function(){
+          if($(this).index() <= rating -1){$(this).addClass("icon-enabled")}
+        });
+        this.rating = rating;
+      },
+      clearBar: function(){
+        this.ratingBar.find(".rating-icon").removeClass("icon-enabled");
+      },
+      sendRating : function(){
+        this.emit(new Scalar(this.rating), "Rating");
+      },
+      broadcast: [ "sendRating" ],
+      defaultBroadcast: "sendRating",
+      listeners: {
+        setRating : function (val) {
+          var value = parseInt(val);
+          this.updateBar(value);
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-selector">
+  <template>
+    <link rel="stylesheet" href="css/app-selector.css">
+      <section>
+        <h1>Choose your option(s)</h1>
+        <ul>
+          <li role="option">
+            <label for="option1">
+              <input id="option1" type="radio" value="Option 1" name="option">
+              <span>Option 1</span>
+            </label>
+          </li>
+          <li role="option">
+            <label for="option2">
+              <input id="option2" type="radio" value="Option 2" name="option">
+              <span>Option 2</span>
+            </label>
+          </li>
+          <li role="option">
+            <label for="option3">
+              <input id="option3" type="radio" value="Option 3" name="option">
+              <span>Option 3</span>
+            </label>
+          </li>
+        </ul>
+      </section>
+      <menu>
+        <button class="recommend full">Ok</button>
+      </menu>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBQjQ0QTNERjdCRkFFMjExOTI3Q0ZCMTdDMTBCM0U2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBDNTE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBDNDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2QzRDQUJGQjdGQ0UyMTFCOTkwRkVEOUIzNUFDOTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCNDRBM0RGN0JGQUUyMTE5MjdDRkIxN0MxMEIzRTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+R5uPDQAAAJlJREFUeNpi+P//PxsQTwTit//pB95B7WRjBBITGBgY8hkGBnSCHPAWyBDKm3aF4fKDz3SxVVeBl2FSlg6I+Y4JZDmIRS/L0ewSYmIYYDDqgAF3AAsxivZ3WZJluGPZ8WESAsT4ZDQRjjpgNBuOZsNRB4xmw9FsOJoIRx1AiQPewbpL9AI6CLveDXTntIsBqXv+biC65wABBgC2kCLiOAVVsQAAAABJRU5ErkJggg==">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.setValue('Single Select List');
+        var that = this;
+        var b = this.querySelector('button');
+
+        $(b).on("click",function(){
+          var chosen = that.querySelector('input:checked');
+          if(chosen){
+            that.choose(chosen.value);
+          }
+
+        })
+
+      },
+      editable: {
+        "listtitle": {
+          title: "List Title",
+          type: "text",
+          description: "A title for your list",
+          postset: function(v) {
+            this.setValue(v);
+          }
+        }
+      },
+      choose : function (val){
+        this.emit(val);
+      },
+      listeners: {
+        setValue: function (val) {
+          this.querySelector('h1').innerHTML = val.toString();
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-shutter">
+  <template>
+    <link rel="stylesheet" href="css/app-shutter.css">
+    <div class="start"></div>
+    <div class="modal hidden">
+      <div class="livefeed"></div>
+      <div class="buttonbar hidden">
+        <button class="looksgood">Use this</button> 
+        <button class="startover">Try again</button> 
+        <button class="cancel">Cancel</button> 
+      </div>
+    </div>
+    <button class="freeze hidden">freeze!</button>
+    <img class="snapshot">
+  </template>
+  <description>
+    When clicked takes a picture, and broadcasts image
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQjQxQzY0MzE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQjQxQzY0NDE4M0YxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRCNDFDNjQxMTgzRjExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRCNDFDNjQyMTgzRjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+FE4HFwAAAy9JREFUeNrMVmtIFFEU/mZ2J03TzSxfG+puaKZlBBURGPTDfCSSKNlTMiMCf4TQrxCKYqMfQQ8oENICJRMjg8oXgZCUEUE+MB+Ir9Q1RTNt03Z1pntnd6Wt3Z1Zd7U+uMzrnHu+e+653xkIggBng581BAs83yy4CrPPBqn5IYNAg7BE8CZjrdT8jMjCDnpT1EzI1bJsn537y4V5kzB27RxveFdPvHiGfLYOCsEyzGBY1ndPohB0sYhhlBzDG2YSWV+/V3AAFo7hy6m1OnozWaKDoalWQYIryaPC4mclwVremQchaGiqYyeLdVZ+18liFI6C0AykkGsxGaH2DH52N2O4IB3gF6wr/X3l1nvm76UpoL71gveKine0SD0ZeZTAiKPgFEP5B2DsbcdSsEobh413652Z6CkBcf9GLmRgrv09VgLecbsRdqPKtgZWKvifsZQupzU8GmuSj4GcDnAh4eI7k34APz40YKauHKbBbpfmW9wCUqnODZUcAs9ehn9aDj1q9o0EHtM1jzBRdAmCcc7pfNqaYfkZoMGDr5TCZ0cCiCZgqOo+emoqMdXzSfyu2hSLyOQsaDJPwz/1BDi1BqOFx0Vbj2QgMF8HVdopGMf1eFuQjfHOVrt2QVvisfdmBbj1oZh6/gCT9wolM8BKMeQiNkOVehKCyYjX5w87DE4x1tGKRmJDJBiqgzmirxQkCfglHRVFZeDZQ3ztbpOccKKrDYPEliE+oq+7BGi1U/STPZeLwdpKG1+3CHChEeaVdbTIJjDe0broK7hLYClglebDRevG7QwYichQBMRsl02AHktRoMaG7HQpFwlQhaMIT8qUTUCTkiVeZz82up+B7/WPicAtQJuZi7XRWyUnDCQ2kRm5tH2L0uw2AVN/J6arS8FyXki4XYmA6G0ObakQ7bvzBAy3Ct+qy0RfjyihjRSTwup7WoK+lxWY7usy14cmBlHpRxB2KFe0nW15IynFViV0qRmtI81I5eFmJJvAYjsm8upH2vFqSzumq5z/8lksOLrnRhlpd4uApyC7GS03/h8C9EdxpeAdu8vmGDr9LV9mjNIMnKE3/yA4rcK8XwIMAJBZIBsjrusRAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      startVideo: function() {
+        try {
+          var that = this;
+          window.navigator.mozGetUserMedia({video:true}, function(stream) {
+            that.livefeed.appendChild(that.video);
+            that.video.mozSrcObject = stream;
+            that.video.play();
+            that.modal.classList.remove('hidden');
+            that.livefeed.classList.remove('hidden');
+            that.freeze.classList.remove('hidden');
+            that.buttonbar.classList.add('hidden');
+            that.start.classList.add('hidden');
+            that.snapshot.src = '';
+          }, function(err) {
+            console.log(err);
+            that.stopMedia();
+          });
+        } catch(e) {
+          console.log(e);
+          that.stopMedia();
+        }
+      },
+
+      stopMedia: function() {
+        this.video.mozSrcObject.stop();
+        this.video.mozSrcObject = null;
+        this.livefeed.removeChild(this.video);
+      },
+
+      hideControls: function() {
+        this.stopMedia();
+        this.modal.classList.add('hidden');
+        this.start.classList.remove("hidden");
+        this.buttonbar.classList.add("hidden");
+        this.snapshot.classList.add("hidden");
+      },
+
+      looksGood: function() {
+        this.hideControls();
+        console.log("emitting", this.snapshot.src);
+        this.emit(this.snapshot.src);
+      },
+
+      captureImage: function() {
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.width  = this.video.videoWidth/2;
+        canvas.height = this.video.videoHeight/2;
+        ctx.drawImage(this.video, 0, 0, canvas.width, canvas.height);
+        var dataurl = canvas.toDataURL('image/png');
+        this.setValue(dataurl);
+        this.buttonbar.classList.remove("hidden");
+        this.freeze.classList.add("hidden");
+        this.snapshot.classList.remove("hidden");
+        this.livefeed.classList.add('hidden');
+      },
+      init: function (params) {
+        var video_status = false;
+        var video = document.createElement("video");
+        this.video = video;
+        video.setAttribute("width", "100%");
+        video.setAttribute("height", "100%");
+        this.livefeed = this.querySelector(".livefeed");
+        this.snapshot = this.querySelector(".snapshot");
+        this.modal = this.querySelector(".modal");
+        this.start = this.querySelector(".start");
+        this.buttonbar = this.querySelector(".buttonbar");
+        this.looksgood = this.querySelector(".looksgood");
+        this.startover = this.querySelector(".startover");
+        this.cancel = this.querySelector(".cancel");
+        this.freeze = this.querySelector('.freeze');
+
+        var that = this;
+        this.start.onclick = function (e) {
+          that.startVideo();
+        }
+        this.freeze.onclick = function (e) {
+          that.captureImage();
+        };
+        this.startover.onclick = function (e) {
+          that.startVideo();
+        };
+        this.cancel.onclick = function (e) {
+          that.hideControls();
+        };
+        this.looksgood.onclick = function(e) {
+          that.looksGood();
+        }
+      },      
+      listeners: {
+        setValue: function (val) {
+          this.snapshot.src = val.toString();
+        }
+      },
+      broadcast: function(e) {
+        this.emit(e)
+      }
+    });
+  </script>
+</element>
+<element name="app-slider">
+  <template>
+    <link rel="stylesheet" href="css/app-slider.css">
+    <div class="value">123</div>
+    <div class="slider"></div>
+  </template>
+  <description>
+    A slider that broadcasts a value.
+  </description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBCQzE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBCRDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQxRkM0RTE1MTgyNDExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQxRkM0RTE2MTgyNDExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+z5Wj6AAAANlJREFUeNpi+P//PxsQTwTit//pB95B7WRjBBITGBgY8hkGBnSCHPAWyBB6VhLI8OPqKbrYyqFtxiDVsx7EfMcEshzEopflaHYJMTEMMCDLAUrbn4LxgDmAmoAFmyAogYASCjEhQUq8gxL6wIUAIyPxIYDNpdh8fs9TepimAUKAGj4fNCFAEweQUk4M7XKAlHJieJUDxPqcmNwyNMsBapYTg78coGbdP7TLAUpDYeiWA9Ss+4dmOUArnw+qcuAdrLtEL8ChZQpjvhvozmkXA1L3/N1AdM8BAgwADzZI6AxSF6UAAAAASUVORK5CYII=">
+  </thumbnail>
+  <friends>app-map,app-shutter</friends>
+  <script type="text/ceci">
+    function Scalar(value) {
+      this.value = value;
+      this.editor = 'app-slider';
+    };
+    Scalar.prototype.toString = function() {
+      return String(this.value);
+    };
+    Ceci(this, {
+      init: function (params) {
+        this.slider = $(this).find(".slider");
+        this.min = this.getAttribute('minValue') || 0;
+        this.max = this.getAttribute('maxValue') || 50;
+        this.setAttribute("minValue", this.min);
+        this.setAttribute("maxValue", this.max);
+        this.default = this.getAttribute("startingValue") || this.min;
+        this.valueIndicator = this.querySelector(".value");
+        this.valueIndicator.innerHTML = this.default;
+        var element = this;
+        var t = this;
+        this.slider.slider({
+          range: "min",
+          value: this.default,
+          max : t.max,
+          min: t.min,
+          slide : function(event,ui){
+            element.changeValue(ui.value);
+          }
+        });
+      },
+      getCurrentValue: function() {
+        return this.getAttribute("value");
+      },
+      updateValue: function(val) {
+        this.slider.slider("value",val);
+        this.setAttribute("value", val);
+        this.valueIndicator.innerHTML = val;
+        this.emit(new Scalar(val), "Slider value");
+      },
+      changeValue: function(val) {
+        this.setAttribute("value", val);
+        this.valueIndicator.innerHTML = val;
+        this.emit(new Scalar(val), "Slider value");
+      },
+      broadcast: [ "changeValue" ],
+      defaultBroadcast: "changeValue",
+      emitValue: function(val) {},
+      editable: {
+        startingValue: {
+          type: "number",
+          description: "Starting value for the slider.",
+          postset: function(v) {
+            
+          }
+        },
+        minValue: {
+          type: "number",
+          description: "The lowest possible value.",
+          postset: function(v) {
+            if(parseInt(v) || parseInt(v) == 0){
+              v = parseInt(v);
+              if(v >= this.max){ v = this.max - 1 };
+              this.slider.slider("option","min",v);
+            }
+          }
+        },
+        maxValue: {
+          type: "number",
+          description: "The highest possible value.",
+          postset: function(v) {
+            if(parseInt(v)){
+              v = parseInt(v);
+              if(v <= this.min) {
+                v = this.min + 1;
+              }
+              this.max = v;
+              this.slider.slider("option","max",v);
+            }
+          }
+        }
+      },
+      listeners: {
+        setValue : function (val) {
+          var value = parseInt(val);
+          this.updateValue(value);
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-storage-box">
+  <template>
+    <link rel="stylesheet" href="css/app-storage-box.css">
+    <h1>
+      <span class="folder-name">Storage Box</span>
+    </h1>
+    <div class="folder-content-wrapper">
+    <div class="data-items"></div>
+  </template>
+  <description>
+    Lists data that you send it
+  </description>
+  <thumbnail>   
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMkYwNDQyQjE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMkYwNDQyQzE4MDYxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMzMDhBMzQ4MTgwNDExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEyRjA0NDJBMTgwNjExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4J7VsgAAAg9JREFUeNrkV71OAzEMjpMrVICQ6ABdYEfiCYAJJgQPAXTmGSoepBIPASsj4ikQYuFXLBSpcJeYpORKyCVccq16A5aipKkdO/ZnO0cQcQ9R3GMgCZE9fssgmcQApZwQaJMIQsyeAZJlMgECdSu1OO/tkMe7qz+Z22ubZL9zOVy/X0Bjfh+zcQ1I8kWZckUPBs/1TbJ622325fJTjg81d04HwiXX6zZBTlTrY3JwOVLFn1S1fPckvQnllYoKezwbvPL07TAhNRFLmi3BydkIA9JN4cAxARmwb9OKxNKBxpLXA1SeBpCj/ufAfA2GUixRCoX/sZgFdRElNdMoBP0LSKUvGspdAMXaoz05TB+dSsxxAaH5wLFP9axS907WkI1fBkiJxKHYDiMz1jTCo9SYF+VYL3hgymGjrsPgP4EQ6zbgs04D0MQeHdeFEfzcwFqpAWUKQOe08PC69vqGEaUghIAbqTEIlM/fA3RSWZBXRRERggVXX6KRMUerNM9H1A8IqQPcoxysfiA0kDDiAhhiQOowAizgEaPhhHpQ+H5Ty8qZkluZYIpJRWqFUPh6AfU0KG6EACJ7B+pzTdnMFwJXXguHQqGf4lXBx30GoOcAZvGkFStiTnO+9wANLCqzkWUYSt8DrLVtKhNWzmOFeuGVY0tbxqtYfu0SYBP50IxvaeJJeeCYYPYyfeX8gQA9+hJgALLSGOPiuxpPAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <script type="text/ceci">
+    var element = this;
+    require(['https://cdn.firebase.com/v0/firebase.js'], function() {
+
+      function Editable(value, name) {
+        this.value = value;
+        this.name = name;
+        this.editor = editor;
+      }
+      
+      Editable.prototype.toString = function() {
+        return this.value;
+      }
+
+      Ceci(element, {
+        init: function (params) {
+          this.itemCount = 0;
+          this.setAttribute('backgroundColor', this.getAttribute('backgroundColor') || '#333');
+          this.setAttribute('boxName', this.getAttribute('boxName') || 'Storage Box');
+          this.emitonadd = this.getAttribute('emitOnAdd') || false;
+          this.emitonload = this.getAttribute('emitOnLoad') || false;
+          params = params ? params : {};
+          var appId = params.appId || "app123";
+          var io = new Firebase("https://flathead.firebaseio.com/" + appId + "/data_folder/1");
+
+          var t = this;
+          t.aggregate = {};
+
+          //Emits the selected statistic
+          $(this).find(".emit-stats .emit-data").on("click",function(){
+            var data = $(this).closest("div").find("select").val();
+            t.broadcast(data);
+            return false;
+          });
+
+          t.io = io;
+
+          // Emits all items based on selected keys
+          $(this).find(".emit-items .emit-data").on("click",function(){
+            
+            var checkedItems = $(t).find(".emit-wrapper input:checked");
+            var getItems = [];
+            checkedItems.each(function(){
+              getItems.push($(this).val());
+            });
+
+            var emit = [];
+
+            io.on('value', function(snapshot) {
+              for ( var i in snapshot.val()){
+                var item = JSON.parse(snapshot.val()[i]["value"]);
+
+                var emitItem = {};
+                for (var j in item){
+                  var name = item[j]["name"];
+                  var value = item[j]["value"];
+                  if(getItems.indexOf(name) > -1){
+                    emitItem[name] =  value ;
+                  }
+
+                }
+                emit.push(emitItem);
+              }
+            });
+
+            t.broadcast(emit);
+            return false;
+          });
+
+          // This builds out the items in the list 
+          var addItem = function(data, name){
+
+            try {
+              var item = document.createElement("div");
+              item.setAttribute("class","data-item")
+              var table = document.createElement('table');
+              table.setAttribute("cellspacing","0");
+              table.setAttribute("cellpadding","0");
+
+              //If data doesn't parse as an object, add it as a string instead
+              try {
+                var obj = JSON.parse(data.value);
+              } catch(e) {
+                var obj = data.value;
+              }
+
+              if(typeof obj == "object") {
+                for (var key in obj){
+                  var row = document.createElement('tr');
+                  row.innerHTML = "<td class='key-name'>" + obj[key]["name"] + "</td><td class='value'>" + obj[key]["value"] + "</td>";
+                  table.appendChild(row);
+                }
+              } else {
+                var row = document.createElement('tr');
+                row.innerHTML = "<td>"  + obj + "</td>";
+                table.appendChild(row);
+              }
+
+              item.setAttribute('firebasename', name);
+
+              //Broadcast the data for this item
+              $(item).on('click', function(evt) {
+                var elt = evt.currentTarget
+                var fireId = elt.getAttribute('firebasename');
+                var fireElt = t.io.child(fireId);
+                fireElt.once('value', function(snapshot) {
+                  t.broadcast(snapshot);
+                });
+              });
+
+              item.appendChild(table);
+              t.querySelector('.data-items').appendChild(item);
+
+              var deleteMe = document.createElement('div');
+              deleteMe.innerHTML = "X";
+              deleteMe.setAttribute("class","delete-item");
+
+              $(item).append(deleteMe);
+
+              $(deleteMe).on('click', function(evt) {
+                var dataItem = $(this).closest(".data-item");
+                var fireId = dataItem.attr('firebasename');
+                var fireElt = t.io.child(fireId);
+                dataItem.remove();
+                fireElt.remove();
+              }); // End adding an item
+
+            } catch (e) {
+              console.log(e);
+            }
+          };
+
+          this.io.on('value', function(snapshot) {
+
+          });
+
+          this.io.on('child_added', function(snapshot) {
+            addItem(snapshot.val(), snapshot.name());
+          });
+
+        },
+        sortByCreatedAt: function(a, b) {
+          return a.createdAt > b.createdAt;
+        },
+        resetList : function() {
+          this.querySelector('.data-items').innerHTML = "";
+        },
+        setBackgroundColor : function(v){
+          this.style.backgroundColor =  v;
+        },
+        addAnItem : function(v){
+          var t = this;
+          console.log(v);
+          //Rudimentary check for a value type
+          if(v){
+            this.io.push({value: v.toString()});
+            if(this.emitonadd){
+              this.emit(v.toString());
+            }
+          }
+        },
+      defaultListener: 'addItem',
+        listeners: {
+          addItem: function (v) {
+            this.addAnItem(v);
+          },
+          clearList: function (v, channel) {
+            this.log("clearing list", channel);
+            this.io.remove();
+            this.resetList();
+          },
+        },
+        setTitle : function(v){
+          this.querySelector(".folder-name").innerHTML = v;
+          console.log(v);
+        },
+        broadcast: function (snapshot) {
+          this.emit(snapshot.val()["value"]);
+        },
+        editable: {
+          boxName: {
+            type: "text",
+            description: "A title for your stored items",
+            postset: function(v) {
+              this.setTitle(v);
+            }
+          },
+          emitOnAdd: {
+            type: "boolean",
+            description: "Emit the newest item when it is added.",
+            postset: function(v) {
+              this.emitonadd = v == "true";
+            }
+          },
+          emitOnLoad: {
+            type: "boolean",
+            description: "Emit a value when the app first loads.",
+            postset: function(v) {
+              this.emitonload = v == "true";
+            }
+          },
+          backgroundColor: {
+            type: "text",
+            description: "Background color",
+            postset : function(v) {
+              this.setBackgroundColor(v);
+            }
+          }
+        }
+      });
+      callback();
+    });
+  </script>
+</element>
+<element name="app-text-input">
+  <template>
+    <link rel="stylesheet" href="css/app-text-input.css">
+    <input type="text"/><button>Submit</button>
+  </template>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNDVCOTVDODE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNDVCOTVDOTE4MTcxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM0NUI5NUM2MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM0NUI5NUM3MTgxNzExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yROonAAAAKBJREFUeNpi/P///0cGBgY+hoEBnxiBDvjPMICACYmdDcSMdMLZMEuRQ4CRzp7/jx4CAx4FAwJY0INkRIYA44hOA6MOADngMDQHDAQ+PKjqAls61gW2o3XBaF0wWheMFsWDygE6VK4PDkPNJLI4+v//8H/qA5CZDMRgeFF8z1OaKkGqtP0pAylF+2giHHAHDHgiBBE6VHbEYaiZRDkAIMAAi4iybzxuY5IAAAAASUVORK5CYII=">
+  </thumbnail>
+  <description>
+    Broadcasts whatever message a user types
+  </description>
+  <script type="text/ceci">
+    function Text(value) {
+      this.value = value;
+      this.editor = 'app-text-input';
+    };
+    Text.prototype.toString = function() {
+      return String(this.value);
+    };
+    Ceci(this, {
+      init: function (params) {
+        var value = this.getAttribute('value');
+        this.querySelector("input").value = value;
+        var element = this;
+        this.button = this.querySelector('button');
+        this.input = this.querySelector('input');
+        this.setAttribute('inputName',this.getAttribute('inputName') || "Text Input");
+        this.input.setAttribute('placeholder', 'Placeholder Text');
+        this.querySelector('button').onclick = function (e) {
+          var input = element.querySelector('input[type="text"]');
+          element.broadcast(input.value);
+          input.value = "";
+        };
+        this.updateConfig();
+
+        this.input.addEventListener("input", function (e) {
+          if (! element._fireonchange) return;
+          element.broadcast(element.input.value);
+        }, false);
+
+        if (this.hasAttribute('placeholdertext')) {
+          this.querySelector("input").setAttribute("placeholder", this.getAttribute('placeholdertext'));
+        }
+        else {
+          this.setAttribute("placeholdertext", "Placeholder");
+        }
+        if (this.hasAttribute('buttontext')) {
+          this.querySelector("button").innerHTML = this.getAttribute('buttontext');
+        }
+        else {
+          this.setAttribute("buttontext", "OK");
+        }
+
+        this.input.addEventListener("keydown", function (e) {
+          if (element._fireonchange) return;
+          if (e.keyCode == 13) {
+            element.broadcast(element.input.value);
+            element.input.value = '';
+          }
+        }, false);
+
+      },
+      listeners: {
+        setValue: function (val) {
+          this.querySelector('input[type="text"]').value = val.toString();
+        }
+      },
+      getCurrentValue: function() {
+        return new Text(this.querySelector('input').value);
+      },
+      broadcast: function (e) {
+        this.emit(new Text(e), this.getAttribute("inputName"));
+      },
+      updateConfig: function() {
+        if (this._fireonchange) {
+          this.classList.add('onchange');
+          this.button.classList.add('hidden');
+        } else {
+          this.classList.remove('onchange');
+          this.button.classList.remove('hidden');
+        }
+      },
+      editable: {
+        inputName: {
+          type: "text",
+          description: "The name of this field, helpful when saving data.",
+          postset: function(v) {}
+        },
+        placeholderText: {
+          type: "text",
+          description: "The text you want your input field to show by default.",
+          postset: function(v) {
+            this.querySelector("input").setAttribute("placeholder", v);
+          }
+        },
+        emitOnChange: {
+          type: "boolean",
+          description: "Emit on change",
+          postset: function(v) {
+            this._fireonchange = v == "true";
+            this.updateConfig();
+          }
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-text">
+  <template>
+    <link rel="stylesheet" href="css/app-textbox.css">
+    <p></p>
+  </template>
+  <description>Listen for a message and updates text</description>
+  <thumbnail>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBQjQ0QTNERjdCRkFFMjExOTI3Q0ZCMTdDMTBCM0U2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQTc1RjBDMTE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQTc1RjBDMDE4M0MxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2QzRDQUJGQjdGQ0UyMTFCOTkwRkVEOUIzNUFDOTc4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCNDRBM0RGN0JGQUUyMTE5MjdDRkIxN0MxMEIzRTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/984SgAAAxpJREFUeNrMV11I01EUP86lFjNlG9twwnAxWyTNnC4/CjNT0UhYL9GDhkK99l72VBQFQT320oM9RL3sQTAkM0bpxDRDJMyBMfrAjTacmSlYa7+77n/Tzbn/3EcH7u7Zueece875n3PuvRQIBPKC40FweAOZA9+/PfNygj/3iegKZQfuwABvEJHfHGqheY8jI7uWq+qor+0FUJ8EmwPL1OZb9pJLKMsgTUbIoKqlCs0pKlfXhzxyj9Hs4gg5PePpNwCbX28b3kQ7rDlJVtNVujF0WrQRog1oMvSy+bnjG005/Qw3G4qova6ErYk1QFQOaIuMVF92nuG2MTe9nF1iAzgAa+BJmwEW3TmS5OTS6/cecrrXBDpw0LAGnrQYsCe3gOr0Ie/tM96odU4DD3hTboBFZyVN4QGacy2zsAO6GzVktSgZDhrWwAPelBvAk88xG/a+83gJtdaohf98jfOmzIDK0nbWPr3+deq3LzJac0UxKYryyajbTzV6GaNhDTzghUzKDGgy9LB5ZMoj0DosYc/P1oZxzsNldm0AGs/R0g5aXdugZ29C3hvUBVRllNOPdS/9CfymE5UqUspCLQU84IUMZHdtAP+e9mkPfV/ZYHhXs5bNhfkKVnqA3pYQDTzgTTQX4nbC4r0aMmnbhMbDYWDcHVWKy6sbAg5edEbIQsfSr8XkDIAH8PLdnG9T43m7sBLXK/BCpsqoYDpsM7eS+wQmbSubByfcok85LsN1iI5Ag/4C6ZXV9Nn9U2g8KL2+7kNxFV6+N80iAJmLQVm9uprpGl14Ii4CPIGGJ8Ol13hEsaPnPEEjZeMlo3S70tvaeFB6KDeU3bWBY/TVPxd1Ut7unCRzsDyVMherBsiiW0IXdMY6qmNG4KCqgc0TH8KZbq0PNZuxT0+jNgeANv1lkPYVSKnDrBToXAfXmVAEPnpG2YxSwoiEV85H24ZzwmVjDajnTBkbsXQmFAGECteryJsy8J2uXEi0h6OXRMnhXRBgR+tjWUZvw/1dK+JvROmA/8IAH38uZQoiTklfth+ndyniee7LxvP8rwADAMOWOd8yAn8yAAAAAElFTkSuQmCC">
+  </thumbnail>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        this.setValue('Heading');
+        this.setAttribute('text',"I'm a text box.")
+      },
+      editable: {
+        text: {
+          type: "text",
+          description: "A text for your label to show up in your app",
+          postset: function(v) {
+            this.setValue(v);
+          }
+        }
+      },
+      listeners: {
+        setValue: function (val) {
+          this.querySelector('p').innerHTML = val.toString();
+        }
+      }
+    });
+  </script>
+</element>
+<element name="app-timer">
+  <template>
+    <link rel="stylesheet" href="css/app-timer.css">
+    <div class="timer">
+      <div class="current-time"></div>
+    </div>
+  </template>
+  <description>
+    Listens for a message and counts
+  </description>
+  <thumbnail>  
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMzA4QTM0NjE4MDQxMUUzQkQ3OEUxRDEyODNBNUUxMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMzA4QTM0NzE4MDQxMUUzQkQ3OEUxRDEyODNBNUUxMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMzMDhBMzQ0MTgwNDExRTNCRDc4RTFEMTI4M0E1RTExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMzMDhBMzQ1MTgwNDExRTNCRDc4RTFEMTI4M0E1RTExIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YhZbzwAABKdJREFUeNrEV31sU1UUv/e+z7Z2K6hrtyH7ICwOh/g1BImBbM6MaPQfZWYjTs2UmBhM/IcQZSBZUP8xi4lRgsNhZCNGCH9MSVjGgkqcbho/QNxUtqnrvqCr69d7bd97nvv6Wkqzrq8zqyc56fvoO+d3zj3n3N/FmqYhk0KQqjyqylItZpgtmOVKEWHyjHdzoL+DXgD9CrQHVDVllQLIoBWaEj2mZSkA9GMl6Ls9k32cIQPvg+4ykCLp8neR4MBZIl36lkQmx5Dq89KPNWJ3YK6oLGrZ8EDAurmeCGuq8hHGsc/C8tHRx8tbys9MLOgoHQAX6Ieg9RSmv/+UNHf8bSHiHiNmksoVlSLHUy+r9oeeYBAmAELqx7zYCO+mzACoAD0NWql4r/qnDjTz8vAPPDIv1KAevlBxF3K+elhlC1YRLRoZgWAewxw/vBiAEtA+0DXybz95p15rylPmPSQLxyjuPC5M3krNuf+oIq6rZqGIx6Fwt8HjsXQAqPMa6eI3/sm9DTZAjVF2EgFlU0FAx2iFh7pD4vrNVijo85hht11vretymDqPXp30T7U+bTXjHApL1yRhkzKRyAq1NbW/mYnOugPgfCvcd6QCoOv+AtJUbbqthVdDfoKWJjglqEQQaijATx/apVEfkJHnoIPWJQBAq7TSX1/fyWiWBZcVOPnX723+c6ck/cZi26sDuPbePgHzQhPtc293O4eWV/BcdzuhviALO2mNEnt9YwN9I10cQNDnaLklMjHKyyM/+mProjxCYGJtp9fBwXMoR4IDFz63GktfQ4gtb6OegV+GcgUARvqQXntqWK4l5KZ8l54a92jOAEQmrsRakBfKCBFEUUfj8+YMQNwXFL+FoP9ZWFUKhonVLsKWipS52SUZSZmGCbmyvXhhZgO+jAkZIJCOaXoD+3nOouaKy2NLEfD9zSr+fwZZ520lYuW9CIhGVobSRZhJqC9jPA8STQr20hvrxtqcZcBaXRNbAjnUR64dOXhCR1W1CVEmswxyw35PfYhV9+vXnmNvfUqK23vmozMTn1EO59jxUiZjSqpBs+woLo6G3YpB07pcBzqDehtijttDf+11O5CwdoOZLddUtKn/Bduyve7JmE9ePJjYjpkVBZdgPTqBLqGCPe8qxGJL54BZxHnUyNDCrWexhZ2tHWGIHsMm9AE8Gr6BEWHB8izQpS+44jLGua9Dhu0y23XWUshIMiVTXG3H/ewthXZwfh4CfX4hSoaALjXDXj1uuftBwfX6R+FFMpGYqsn1ZdjTUiJXXW1dEpDSldQ2OH8mMy3X1F5I1WrgB5GZN19kgSHjpZS/sPZOuqQqDB6oOvVPsFkHj0fMHExKIVW0JrbCh8jX+wnynngHRSbHzU26whI4mOzWi1qveDn0NSxxYzIdzwTAmNXRI5hlW2I3qj4pAwO9SL48pIOJ72p0tlOnQuV9mm3Tw0i8oxpTx3rfznu6xhvW70x3NMt4OA27x6ois+6ebA+nUc/M6dDPA/f8UV+E/8vhND7zeSb/5tUrml5pYQtLtnCrystYx60ObHAJTVF8miz9BXR+EGhWv6fzjZOBL3uktFEnyb8CDACRd7mB9eQFuAAAAABJRU5ErkJggg==">
+  </thumbnail>
+  <script type="text/flathead">
+  </script>
+  <script type="text/ceci">
+    Ceci(this, {
+      init: function (params) {
+        var that = this;
+        this.hasAlert = false;
+        this.alertTime;
+        this.mS = 0;
+        this.mode = "up";
+        this.updateDisplay();
+        this.timerInterval = false;
+      },
+      updateTime : function(){
+        //Get time difference between ticks
+        this.elapsedTime = new Date().getTime() - this.startTime;
+        this.startTime = new Date().getTime();
+        //Add it up in milliseonds
+
+        if(this.mode == "up"){
+          this.mS = this.mS + this.elapsedTime;
+        } else {
+          this.mS = this.mS - this.elapsedTime;
+        }
+
+        this.updateDisplay();
+
+        if(this.mode == "down"){
+           this.checkAlert();
+        }
+      },
+      checkAlert : function(){
+        // var sec = Math.round(this.mS/1000 * 10)/10;
+        if(this.mS <= 0) {
+          this.mS = 0;
+          this.mode == "up";
+          this.emit("Ding");
+          this.stopTheTimer(); 
+          this.updateDisplay();
+        }
+      },
+      updateDisplay : function(){
+        var hour  = Math.round((this.mS/1000/60/60)) % 60;
+        var min   = Math.round((this.mS/1000/60)) % 60;
+        var sec   = (this.mS/1000) % 60;
+        sec = Math.round(sec * 10)/10;
+        if(Math.round(sec) == sec) { sec += '.0'; };
+        if(min < 10) { min = "0" + min;}
+        if(sec < 10) { sec="0" + sec;}
+        if(hour > 0) { hour = hour + ":"; } else {  hour = "";}
+        this.currentTime = hour + min + ":" + sec;
+        this.querySelector('.current-time').innerHTML = this.currentTime;
+      },
+      startTheTimer : function(){
+        this.startTime = new Date().getTime();
+        var that = this;
+        if(!this.timerInterval){
+          console.log("setting timer interval");
+          this.timerInterval = setInterval(function(){
+            that.updateTime();
+          },50);
+        }
+      },
+      stopTheTimer : function(){
+        clearInterval(this.timerInterval);
+        this.timerInterval = false;
+      },
+      resetTheTimer : function(){
+        this.mS = 0;
+        this.mode = "up";
+        this.updateDisplay();
+      },
+    defaultListener : "start",
+      listeners: {
+        setTimer : function(listener, channel){
+          this.mode = "down";
+          this.mS = 1000 * parseInt(listener) || 10000;
+          this.startTheTimer();
+        },   
+        stop: function (listener,channel) {
+          this.stopTheTimer();
+        },
+        start: function (listener,channel) {
+          this.startTheTimer();
+        },
+        reset: function (value, channel) {
+          this.resetTheTimer();
+        }
+      }
+    });
+  </script>
+</element>
+</elements>

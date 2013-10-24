@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fireworks</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+        <link rel="component" type="text/ceci" href="all.xml">
+        <script src="js/require.js"></script>
+        <script>
+            (function(){
+            var requireCtx = require.config({
+              baseUrl: 'js',
+              paths: {
+                'ceci': 'ceci',
+                'ceci-ui': 'ceci-ui',
+                'ceci-cards': 'ceci-cards',
+                'jquery': 'jquery.min'
+              }
+            });
+            
+            requireCtx(['ceci', 'ceci-ui', 'ceci-cards'], function (Ceci) {
+              Ceci.load(function (components) {
+                Ceci.convertContainer(document.getElementById('flathead-app'));
+              });
+            });
+            })();
+        </script>
+    </head>
+<body>
+    <div id="flathead-app">
+        <div class="ceci-card" id="ceci-card-1" style="display: block;">
+            <div class="fixed-top drophere ui-sortable"></div>
+            <div class="phone-canvas drophere ui-sortable">
+                <app-fireworks id="app-fireworks-1" fireworksound="" class="component ui-draggable" style="position: relative; z-index: 291;">
+                    <broadcast class="hide" on="false"></broadcast>
+                    <listen on="blue" for="shootRocket"></listen>
+                </app-fireworks>
+                <app-counter id="app-counter-1" countitem="Rockets" class="component ui-draggable" style="position: relative; z-index: 294;">
+                    <broadcast class="hide" on="false"></broadcast>
+                    <listen on="blue" for="countUp"></listen>
+                </app-counter>
+                <app-button id="app-button-1" buttonlabel="Shoot!" buttoncolor="#4DB227" textcolor="#FFFFFF" class="component ui-draggable selected" style="position: relative; z-index: 295;">
+                    <broadcast class="hide" on="blue"></broadcast>
+                </app-button>
+            </div>
+            <!--div class="fixed-bottom drophere ui-sortable"></div-->
+        </div>
+    </div>
+</body>
+</html>
